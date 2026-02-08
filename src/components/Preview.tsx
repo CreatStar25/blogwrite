@@ -1,15 +1,17 @@
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { ArticleData } from '../App';
-import { Eye, FileText, Image as ImageIcon } from 'lucide-react';
+import { Eye, FileText, Image as ImageIcon, RefreshCw } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 interface Props {
   data: ArticleData | null;
   loading: boolean;
+  onRegenerateImage?: (index: number) => void;
+  regeneratingIndices?: number[];
 }
 
-export function Preview({ data, loading }: Props) {
+export function Preview({ data, loading, onRegenerateImage, regeneratingIndices = [] }: Props) {
   const [activeTab, setActiveTab] = useState<'preview' | 'markdown'>('preview');
 
   if (loading) {
@@ -85,8 +87,23 @@ export function Preview({ data, loading }: Props) {
                   {data.images.map((img, i) => (
                     <div key={i} className="group relative rounded-lg overflow-hidden border border-gray-200">
                       <img src={img.url} alt={img.prompt} className="w-full h-48 object-cover" />
-                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                        <p className="text-white text-xs text-center">{img.filename}</p>
+                      
+                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
+                        <p className="text-white text-xs text-center mb-2 break-all">{img.filename}</p>
+                        
+                        {onRegenerateImage && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onRegenerateImage(i);
+                            }}
+                            disabled={regeneratingIndices.includes(i)}
+                            className="bg-white/20 hover:bg-white/30 text-white border border-white/50 px-3 py-1.5 rounded-full text-xs flex items-center gap-1.5 backdrop-blur-sm transition-all"
+                          >
+                            <RefreshCw size={12} className={cn(regeneratingIndices.includes(i) && "animate-spin")} />
+                            {regeneratingIndices.includes(i) ? '生成中...' : '重新生成'}
+                          </button>
+                        )}
                       </div>
                     </div>
                   ))}

@@ -7,9 +7,10 @@ export interface GenerateParams {
   language: string;
   wordCount: string;
   imageCount: number;
+  imageSize: string;
   apiKey?: string;
   model?: string;
-  references?: string;
+  project?: string;
 }
 
 interface Props {
@@ -21,15 +22,30 @@ export function GenerateForm({ onGenerate, loading }: Props) {
   const [params, setParams] = useState<GenerateParams>({
     topic: '',
     keywords: '',
-    language: 'Chinese',
-    wordCount: '1000-2000',
-    imageCount: 3,
+    language: 'English',
+    wordCount: '500字左右',
+    imageCount: 1,
+    imageSize: '1024x768', // Default 4:3
     apiKey: '',
     model: import.meta.env.VITE_DOUBAO_MODEL || 'ep-20240604123456-abcde', // Default placeholder
-    references: ''
+    project: 'aixzip'
   });
 
-  const [showAdvanced, setShowAdvanced] = useState(true); // Open by default to show Endpoint ID
+  const projects = [
+    { id: 'aixzip', name: 'aixzip', url: 'https://img.aixzip.com/aitools/' },
+    { id: 'banksmt', name: 'banksmt', url: 'https://img.bankstatementconverte.com/banksmt/' },
+    { id: 'limaxai', name: 'limaxai', url: 'https://img.limaxai.com/limaxaiblog/' },
+  ];
+
+  const aspectRatios = [
+    { label: '4:3 (宽幅)', value: '1024x768' },
+    { label: '1:1 (正方形)', value: '1024x1024' },
+    { label: '16:9 (横屏)', value: '1280x720' },
+    { label: '3:4 (竖屏)', value: '768x1024' },
+    { label: '9:16 (手机)', value: '720x1280' },
+  ];
+
+  const [showAdvanced, setShowAdvanced] = useState(false); // Default hidden as requested
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -67,6 +83,24 @@ export function GenerateForm({ onGenerate, loading }: Props) {
         />
       </div>
 
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          项目选择
+        </label>
+        <select
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+          value={params.project}
+          onChange={e => setParams(p => ({ ...p, project: e.target.value }))}
+          disabled={loading}
+        >
+          {projects.map(proj => (
+            <option key={proj.id} value={proj.id}>
+              {proj.name} ({proj.url})
+            </option>
+          ))}
+        </select>
+      </div>
+
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -95,48 +129,50 @@ export function GenerateForm({ onGenerate, loading }: Props) {
             onChange={e => setParams(p => ({ ...p, wordCount: e.target.value }))}
             disabled={loading}
           >
-            <option value="500-1000">短篇 (500-1000字)</option>
-            <option value="1000-2000">中篇 (1000-2000字)</option>
-            <option value="2000+">长篇 (2000字以上)</option>
+            <option value="500字左右">500字左右</option>
+            <option value="1000字左右">1000字左右</option>
           </select>
         </div>
       </div>
 
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
-          配图数量: {params.imageCount}
-        </label>
-        <input
-          type="range"
-          min="0"
-          max="5"
-          step="1"
-          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-          value={params.imageCount}
-          onChange={e => setParams(p => ({ ...p, imageCount: parseInt(e.target.value) }))}
-          disabled={loading}
-        />
-        <div className="flex justify-between text-xs text-gray-500 mt-1">
-          <span>0</span>
-          <span>5</span>
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            配图数量: {params.imageCount}
+          </label>
+          <input
+            type="range"
+            min="0"
+            max="5"
+            step="1"
+            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+            value={params.imageCount}
+            onChange={e => setParams(p => ({ ...p, imageCount: parseInt(e.target.value) }))}
+            disabled={loading}
+          />
+          <div className="flex justify-between text-xs text-gray-500 mt-1">
+            <span>0</span>
+            <span>5</span>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
-          参考链接（每行一个）
-        </label>
-        <textarea
-          rows={4}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
-          placeholder="https://example.com/article-1\nhttps://example.com/article-2"
-          value={params.references}
-          onChange={e => setParams(p => ({ ...p, references: e.target.value }))}
-          disabled={loading}
-        />
-        <p className="text-xs text-gray-500 mt-1">
-          我会结合这些链接的主题进行写作（若无法读取内容，将以链接主题为参考）。
-        </p>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            图片比例
+          </label>
+          <select
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+            value={params.imageSize}
+            onChange={e => setParams(p => ({ ...p, imageSize: e.target.value }))}
+            disabled={loading}
+          >
+            {aspectRatios.map(ratio => (
+              <option key={ratio.value} value={ratio.value}>
+                {ratio.label}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div className="pt-2">
