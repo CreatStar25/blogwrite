@@ -28,17 +28,25 @@ export async function saveAsZip(data: ArticleData) {
   // Add Images
   const imgPromises = data.images.map(async (img) => {
     try {
+      // Use PNG extension for download as requested
+      let filename = img.filename;
+      if (filename.endsWith('.webp')) {
+        filename = filename.replace(/\.webp$/, '.png');
+      } else if (!filename.endsWith('.png') && !filename.endsWith('.jpg') && !filename.endsWith('.jpeg')) {
+        filename += '.png';
+      }
+
       if (img.blob) {
-        folder.file(img.filename, img.blob);
+        folder.file(filename, img.blob);
       } else if (img.b64) {
         const binary = atob(img.b64);
         const array = new Uint8Array(binary.length);
         for (let i = 0; i < binary.length; i++) array[i] = binary.charCodeAt(i);
-        folder.file(img.filename, array, { binary: true });
+        folder.file(filename, array, { binary: true });
       } else if (img.url) {
         const response = await fetch(img.url);
         const blob = await response.blob();
-        folder.file(img.filename, blob);
+        folder.file(filename, blob);
       }
     } catch (e) {
       console.error(`Failed to download image ${img.filename}`, e);

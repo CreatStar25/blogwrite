@@ -86,10 +86,27 @@ export function Preview({ data, loading, onRegenerateImage, regeneratingIndices 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {data.images.map((img, i) => (
                     <div key={i} className="group relative rounded-lg overflow-hidden border border-gray-200">
-                      <img src={img.url} alt={img.prompt} className="w-full h-48 object-cover" />
+                      {img.url ? (
+                        <img src={img.url} alt={img.prompt} className="w-full h-48 object-cover" />
+                      ) : (
+                        <div className="w-full h-48 bg-gray-100 flex flex-col items-center justify-center p-4 text-center">
+                          <div className="text-red-500 mb-2">
+                             <ImageIcon size={24} className="mx-auto mb-1 opacity-50" />
+                             <span className="text-xs font-medium">生成失败</span>
+                          </div>
+                          <p className="text-xs text-gray-500 line-clamp-2" title={img.filename}>
+                            {img.filename.startsWith('Error:') ? img.filename.substring(6) : '未知错误'}
+                          </p>
+                        </div>
+                      )}
                       
-                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4">
-                        <p className="text-white text-xs text-center mb-2 break-all">{img.filename}</p>
+                      <div className={cn(
+                        "absolute inset-0 bg-black/50 transition-opacity flex flex-col items-center justify-center p-4",
+                        img.url ? "opacity-0 group-hover:opacity-100" : "opacity-100"
+                      )}>
+                        {img.url && (
+                          <p className="text-white text-xs text-center mb-2 break-all">{img.filename}</p>
+                        )}
                         
                         {onRegenerateImage && (
                           <button
@@ -98,7 +115,10 @@ export function Preview({ data, loading, onRegenerateImage, regeneratingIndices 
                               onRegenerateImage(i);
                             }}
                             disabled={regeneratingIndices.includes(i)}
-                            className="bg-white/20 hover:bg-white/30 text-white border border-white/50 px-3 py-1.5 rounded-full text-xs flex items-center gap-1.5 backdrop-blur-sm transition-all"
+                            className={cn(
+                              "text-white border border-white/50 px-3 py-1.5 rounded-full text-xs flex items-center gap-1.5 backdrop-blur-sm transition-all",
+                              img.url ? "bg-white/20 hover:bg-white/30" : "bg-red-500/80 hover:bg-red-600/80 border-transparent"
+                            )}
                           >
                             <RefreshCw size={12} className={cn(regeneratingIndices.includes(i) && "animate-spin")} />
                             {regeneratingIndices.includes(i) ? '生成中...' : '重新生成'}

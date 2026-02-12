@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Loader2, Settings2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 
 export interface GenerateParams {
   topic: string;
@@ -10,6 +10,7 @@ export interface GenerateParams {
   imageSize: string;
   apiKey?: string;
   model?: string;
+  imageModel?: string;
   project?: string;
 }
 
@@ -25,9 +26,10 @@ export function GenerateForm({ onGenerate, loading }: Props) {
     language: 'English',
     wordCount: '500字左右',
     imageCount: 1,
-    imageSize: '1024x768', // Default 4:3
+    imageSize: '2560x1920', // Default 4:3
     apiKey: '',
     model: import.meta.env.VITE_DOUBAO_MODEL || 'ep-20240604123456-abcde', // Default placeholder
+    imageModel: import.meta.env.VITE_DOUBAO_IMG_MODEL || 'ep-20240604123456-image', // Default placeholder
     project: 'aixzip'
   });
 
@@ -38,14 +40,12 @@ export function GenerateForm({ onGenerate, loading }: Props) {
   ];
 
   const aspectRatios = [
-    { label: '4:3 (宽幅)', value: '1024x768' },
-    { label: '1:1 (正方形)', value: '1024x1024' },
-    { label: '16:9 (横屏)', value: '1280x720' },
-    { label: '3:4 (竖屏)', value: '768x1024' },
-    { label: '9:16 (手机)', value: '720x1280' },
+    { label: '1:1 (正方形)', value: '2048x2048' },
+    { label: '16:9 (横屏)', value: '2560x1440' },
+    { label: '4:3 (标准)', value: '2560x1920' },
+    { label: '3:4 (竖屏)', value: '1920x2560' },
+    { label: '9:16 (手机)', value: '1440x2560' },
   ];
-
-  const [showAdvanced, setShowAdvanced] = useState(false); // Default hidden as requested
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -173,51 +173,6 @@ export function GenerateForm({ onGenerate, loading }: Props) {
             ))}
           </select>
         </div>
-      </div>
-
-      <div className="pt-2">
-        <button
-          type="button"
-          className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 mb-2"
-          onClick={() => setShowAdvanced(!showAdvanced)}
-        >
-          <Settings2 size={16} />
-          {showAdvanced ? '隐藏高级设置' : '显示高级设置'}
-        </button>
-        
-        {showAdvanced && (
-           <div className="bg-gray-50 p-3 rounded-lg border border-gray-200 mb-4 space-y-3">
-             <div>
-               <label className="block text-sm font-medium text-gray-700 mb-1">
-                 Model Endpoint ID (必填)
-               </label>
-               <div className="text-xs text-gray-500 mb-1">
-                 请在火山引擎控制台创建推理接入点，并复制 <span className="font-mono text-blue-600">ep-</span> 开头的 ID。
-                 <br />不要直接使用模型名称 (如 doubao-pro-4...)。
-               </div>
-               <input
-                 type="text"
-                 className="w-full px-3 py-1.5 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none"
-                 placeholder="ep-20240604xxxxxx-xxxxx"
-                 value={params.model}
-                 onChange={e => setParams(p => ({ ...p, model: e.target.value }))}
-               />
-             </div>
-
-             <div>
-               <label className="block text-sm font-medium text-gray-700 mb-1">
-                 API Key (可选, 覆盖环境变量)
-               </label>
-               <input
-                 type="password"
-                 className="w-full px-3 py-1.5 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none"
-                 placeholder="sk-..."
-                 value={params.apiKey}
-                 onChange={e => setParams(p => ({ ...p, apiKey: e.target.value }))}
-               />
-             </div>
-           </div>
-        )}
       </div>
 
       <button

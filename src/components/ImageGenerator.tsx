@@ -15,15 +15,15 @@ export function ImageGenerator({ apiKey: initialApiKey, onLog }: Props) {
   const [error, setError] = useState<string | null>(null);
   
   const [localApiKey, setLocalApiKey] = useState('');
-  const [localModel, setLocalModel] = useState('');
+  const [localModel, setLocalModel] = useState(import.meta.env.VITE_DOUBAO_IMG_MODEL || '');
   const [showSettings, setShowSettings] = useState(false);
 
   const aspectRatios = [
-    { label: '1:1 (正方形)', value: '1:1', size: '1024x1024' },
-    { label: '16:9 (横屏)', value: '16:9', size: '1280x720' }, 
-    { label: '4:3 (标准)', value: '4:3', size: '1024x768' },
-    { label: '3:4 (竖屏)', value: '3:4', size: '768x1024' },
-    { label: '9:16 (手机)', value: '9:16', size: '720x1280' },
+    { label: '1:1 (正方形)', value: '1:1', size: '2048x2048' },
+    { label: '16:9 (横屏)', value: '16:9', size: '2560x1440' }, 
+    { label: '4:3 (标准)', value: '4:3', size: '2560x1920' },
+    { label: '3:4 (竖屏)', value: '3:4', size: '1920x2560' },
+    { label: '9:16 (手机)', value: '9:16', size: '1440x2560' },
   ];
 
   const handleGenerate = async (e: React.FormEvent) => {
@@ -45,6 +45,8 @@ export function ImageGenerator({ apiKey: initialApiKey, onLog }: Props) {
       if (!apiKey) {
         throw new Error("请配置 API Key");
       }
+
+      onLog(`使用模型 ID: ${localModel}`);
 
       const image = await generateSingleImage({
         prompt,

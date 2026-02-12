@@ -46,14 +46,15 @@ export async function generateArticle(
 1. 符合Astro网站博文规范：
     - 开头必须包含Astro标准Frontmatter配置（精准填写，贴合SEO）：
       ---
-      title: 【博文标题，核心关键词前置，无堆砌】
-      description: 【100-150字，融入1个核心关键词+1个长尾关键词，概括博文核心价值】
-      pubDate: 【发布日期，格式：YYYY-MM-DD】
-      coverImage: 【第一张配图的完整R2引用地址，格式：自定义域名前缀+图片文件名】
-      tags: 【2-5个标签，含1个核心SEO关键词，逗号分隔】
-      lang: ${langCode}
-      slug_en: 【English kebab-case string only, even if language is not English. NO Pinyin. Example: bank-statement-to-excel】
+      title: "【博文标题，核心关键词前置，无堆砌】"
+      description: "【100-150字，融入1个核心关键词+1个长尾关键词，概括博文核心价值】"
+      pubDate: "【发布日期，格式：YYYY-MM-DD】"
+      coverImage: "【第一张配图的完整R2引用地址，格式：自定义域名前缀+图片文件名】"
+      tags: "【2-5个标签，含1个核心SEO关键词，逗号分隔】"
+      lang: "${langCode}"
+      slug_en: "【English kebab-case string only, even if language is not English. NO Pinyin. Example: bank-statement-to-excel】"
       ---
+    - 注意：Frontmatter 中的 title, description, tags 等字段值必须用英文双引号包裹。
     - 正文排版：逻辑清晰（按“痛点引入→核心内容→实操步骤→总结”结构撰写）；层级分明（H2=一级小标题、H3=二级小标题，不使用H1）；重点SEO关键词可加粗，合理使用有序列表、无序列表；
 
 2. 配图要求：
@@ -234,8 +235,10 @@ export async function generateImages(
   }
 
   const images: ArticleData['images'] = [];
-  const imageModel = import.meta.env.VITE_DOUBAO_IMG_MODEL || IMG_MODEL_NAME;
+  const imageModel = params.imageModel?.trim() || import.meta.env.VITE_DOUBAO_IMG_MODEL || IMG_MODEL_NAME;
   
+  onLog(`使用生图模型 ID: ${imageModel}`);
+
   // Base slug for filenames
   const slugMatch = article.content.match(/slug_en:\s*([A-Za-z0-9-]+)/); // Old frontmatter check
   // Also check for 'slug' in metadata if available? No, usually in content.
@@ -256,13 +259,33 @@ export async function generateImages(
           onLog(`警告: 图片模型 ID "${imageModel}" 可能不正确。火山引擎通常需要 ep- 开头的接入点 ID。`);
       }
 
+      // Validate size for Doubao (must be at least 3686400 pixels)
+      let size = params.imageSize || "2048x2048";
+      
+      // Auto-correct invalid/low sizes for Doubao Seedream to meet ~3.7MP requirement
+      // Mapping to safe high-res equivalents
+      const sizeMap: Record<string, string> = {
+          "1024x1024": "2048x2048",
+          "1280x720": "2560x1440",
+          "1024x768": "2560x1920",
+          "1280x960": "2560x1920",
+          "768x1024": "1920x2560",
+          "960x1280": "1920x2560",
+          "720x1280": "1440x2560"
+      };
+
+      if (sizeMap[size]) {
+         onLog(`提示: 原尺寸 ${size} 像素数可能过低，自动调整为 ${sizeMap[size]} 以满足模型要求`);
+         size = sizeMap[size];
+      }
+
       const response = await axios.post(
             `${API_BASE}/images/generations`,
             {
                 model: imageModel, 
                 prompt: item.prompt + ", 4k, high quality, photorealistic or professional illustration, text in image must be English only, no other languages", // Append style and strict language constraint
                 n: 1,
-                size: params.imageSize || "1024x1024",
+                size: size,
                 response_format: "b64_json"
             },
             {
@@ -311,7 +334,13 @@ export async function generateImages(
 
     } catch (error: any) {
         console.error(`Image ${i+1} generation failed:`, error);
-        onLog(`警告: 第 ${i+1} 张图片生成失败 - ${error.message}`);
+        
+        let errorDetail = error.message;
+        if (error.response?.data) {
+            errorDetail += ` (Server: ${JSON.stringify(error.response.data)})`;
+        }
+
+        onLog(`警告: 第 ${i+1} 张图片生成失败 - ${errorDetail}`);
     }
   }
 
@@ -326,6 +355,22 @@ export async function generateSingleImage(params: {
 }): Promise<{ url: string; filename: string; blob?: Blob }> {
   const imageModel = params.model?.trim() || import.meta.env.VITE_DOUBAO_IMG_MODEL || IMG_MODEL_NAME;
   
+  // Validate size for Doubao (must be at least 3686400 pixels)
+  let size = params.size;
+  const sizeMap: Record<string, string> = {
+      "1024x1024": "2048x2048",
+      "1280x720": "2560x1440",
+      "1024x768": "2560x1920",
+      "1280x960": "2560x1920",
+      "768x1024": "1920x2560",
+      "960x1280": "1920x2560",
+      "720x1280": "1440x2560"
+  };
+
+  if (sizeMap[size]) {
+      size = sizeMap[size];
+  }
+
   // Append style and negative prompt instructions to the prompt
   const finalPrompt = `${params.prompt}, high quality, 4k, no watermark, clean image, text in image must be English only, no other languages`;
 
@@ -335,7 +380,7 @@ export async function generateSingleImage(params: {
       model: imageModel,
       prompt: finalPrompt,
       n: 1,
-      size: params.size,
+      size: size,
       response_format: "b64_json"
     },
     {

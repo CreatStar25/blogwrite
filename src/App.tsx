@@ -92,8 +92,7 @@ function App() {
         prompt: imageToRegenerate.prompt,
         size: imageSize,
         apiKey,
-        // model: Do not use lastParams.model as it is for text generation. 
-        // Let generateSingleImage use the default image model (IMG_MODEL_NAME).
+        model: lastParams?.imageModel // Use the image model from the last generation
       });
 
       setData(prev => {
