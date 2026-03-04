@@ -1,0 +1,57 @@
+# ============================================================
+# 第一部分：全局 SEO & 路径配置 (Global Configuration)
+# ============================================================
+Project: "sunohk"
+Project_Root: "/Documents/Github/sunohk"
+Base_Language: "zh"
+Markdown_Dir: "src/content/blog/zh"
+
+# 媒体文件自动化配置
+Local_Raw_Asset_Dir: "/Documents/Github/000"      # 你存放原始图片视频的文件夹
+Local_Final_Asset_Dir: "/Documents/Github/000"   # 重命名后存放的本地文件夹（供上传前检查）
+Online_Media_Prefix: "https://img.suno.hk/aiweb/" # 最终博文中引用的线上前缀
+
+# ============================================================
+# 第二部分：批量文章任务 (Task)
+# ============================================================
+
+Title: "2024年Astro多语言站点SEO优化全指南"
+Keywords: ["Astro SEO", "i18n 优化", "静态网站生成"]
+Description: "深度解析如何通过 Astro 提升多语种站点的搜索排名。"
+Slug: "astro-i18n-seo-guide-2024"
+
+# 媒体处理需求：请 Cursor 根据标题和关键词自动生成 SEO 命名的文件名
+# 命名规则：全小写，空格换成连字符(-)，包含 1-2 个核心关键词
+Media_Assets:
+  - Original_Name: "01.png"
+    Type: "Cover"
+    SEO_Suggestion: "auto" # 设为 auto 让 Cursor 根据标题生成，如 astro-seo-cover.png
+  - Original_Name: "02.png"
+    Type: "In-Article"
+    SEO_Suggestion: "auto" # 如 astro-i18n-workflow-step1.jpg
+  - Original_Name: "01.mp4"
+    Type: "Video"
+    SEO_Suggestion: "auto" # 如 astro-seo-tutorial-video.mp4
+
+References: |
+  - 参考资料：[在此粘贴内容或链接]
+  - 核心逻辑：...
+
+
+# ============================================================
+# 第三部分：Cursor 执行逻辑 (Directives for Cursor)
+# ============================================================
+Cursor_SOP:
+  1. 【撰写博文】：根据 Task 内容撰写 MD。
+  2. 【重命名策略】：
+     - 读取 [Media_Assets] 中的 Original_Name。
+     - 结合文章标题和关键词，生成简洁、全小写、带连字符的 SEO 文件名。
+     - 记录下这些新文件名。
+  3. 【URL 替换】：
+     - **重点**：在 MD 文章中引用图片或视频时，禁止使用相对路径。
+     - 必须使用格式：[Online_Media_Prefix] + [新文件名]。
+     - 示例：![描述](https://img.suno.hk/aiweb/astro-seo-cover.png)
+  4. 【文件操作】：
+     - 编写并运行一个终端命令（Bash 或 Python），将 [Local_Raw_Asset_Dir] 里的原始文件
+       重命名并移动到 [Local_Final_Asset_Dir]。
+  5. 【完成反馈】：列出“原始文件名 -> 新文件名 -> 最终引用URL”的对照表。

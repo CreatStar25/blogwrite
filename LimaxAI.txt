@@ -1,0 +1,102 @@
+
+申请发票
+
+年终奖发放
+报销
+
+打款主体问询，算算，许昌
+
+其他项目上线，谷歌统计，页面完善，博文
+
+openclaw
+
+limax支付
+
+国内支付宝切走
+mj站点扫码，切换为海外支付
+
+
+
+今天可以把
+seedance2.hk
+nanobananapro.hk
+nanobanana2.xin
+
+三个上线了
+
+
+
+https://www.notebooklm.vip
+
+
+
+
+https://img.openclawd.hk/aiweb/openlaw5.png
+https://img.openclawd.hk/aiweb/openlaw6.png
+https://img.openclawd.hk/aiweb/openlaw7.png
+
+----
+
+
+任务：高精度复刻【竞品网站URL：https://nanobanana2.org/】的核心页面模块，用于我的项目开发。
+核心要求：
+1. 复刻范围与细节：
+   - 导航栏：1:1还原布局（包括logo位置、菜单层级、下拉列表样式），实现hover变色、移动端折叠菜单（汉堡按钮）交互；
+   - 主页模块：还原banner轮播效果、产品卡片的hover动效、核心数据展示模块的样式；
+   - 底部栏：还原布局+点击跳转逻辑（链接用#占位），保留原网站的版权信息格式（替换为我的项目名称）；
+   - 博客板块：复刻列表页的分页功能、筛选功能、博客卡片样式，以及详情页的排版（标题/正文/评论区结构）。
+2. 技术规范：
+   - 框架：Astro + Tailwind CSS；
+   - 样式：严格匹配原网站的颜色值（RGB/十六进制）、字体（如Inter/微软雅黑）、间距（px/rem统一）；
+   - 性能：避免冗余代码，导航栏/底部栏封装为可复用组件，博客列表支持虚拟列表（若数据量大）；
+   - 兼容性：适配Chrome/Firefox/Safari主流浏览器，兼容移动端375px-1920px宽度。
+3. 输出格式：
+   - 每个组件附带注释说明核心逻辑，提供组件使用示例（如如何引入、传参）；
+   - 给出完整的package.json依赖清单，以及启动/运行说明。
+
+
+Role: 你是一个资深的 Astro 框架前端专家和 UI/UX 设计师。
+Task: 请帮我初始化当前 Astro 项目，并配置极其健壮的多语言 (i18n) 路由系统。
+
+技术栈：
+- Astro
+- Tailwind CSS (用于样式)
+- React (如果需要复杂的交互组件可以引入，否则优先使用纯 Astro 组件)
+
+需求细节：
+1. 语言支持：需要支持 24 种语言。
+语言列表及其代码：English (en, 默认语言), 简体中文 (zh-cn), 繁体中文 (zh-tw), 西班牙语 (es), 阿拉伯语 (ar), 葡萄牙语 (pt), 印度尼西亚语 (id), 马来语 (ms), 法语 (fr), 俄语 (ru), 印地语 (hi), 日语 (ja), 德语 (de), 韩语 (ko), 土耳其语 (tr), 越南语 (vi), 泰语 (th), 意大利语 (it), 波斯语 (fa), 荷兰语 (nl), 波兰语 (pl), 瑞典语 (sv), 乌克兰语 (uk), 罗马尼亚语 (ro)。
+2. 路由策略：
+- 默认语言 (en) 放在根目录，例如 `/` 或 `/about`。
+- 其他语言使用子目录，例如 `/zh-cn/`, `/zh-cn/about`。
+3. 结构要求：
+- 请使用 Astro 内置的 i18n 路由功能。
+- 创建一个集中的语言配置文件 (例如 `src/i18n/ui.ts` 或 `consts.ts`) 来管理基础的 UI 翻译词条。
+- 实现一个全局的语言切换器组件 (LanguagePicker)。
+
+请先完成项目的依赖安装、配置文件 (astro.config.mjs) 更新以及基础的目录结构搭建。完成后告诉我。
+
+
+Task: 在现有的 Astro 项目中，添加支持 24 种语言的 Markdown 博客系统。
+
+参考设计：https://seadanceai.com/blog
+
+具体开发要求：
+1. Content Collections 配置：
+- 在 `src/content/config.ts` 中定义 `blog` 的 Schema（包含 title, description, pubDate, coverImage, tags, lang 等字段）。
+2. 目录结构：
+- 在 `src/content/blog/` 下根据 24 种语言创建子文件夹（例如 `src/content/blog/en/`, `src/content/blog/zh-cn/` 等）。
+3. 博客路由：
+- 博客列表页：例如 `/blog/` (默认英文), `/zh-cn/blog/`。请展示该语言下的所有博客文章卡片。卡片设计请参考上面提供的竞品链接。
+- 博客文章详情页：实现动态路由生成 (getStaticPaths)，路径类似于 `/blog/[slug]` 或 `/zh-cn/blog/[slug]`。
+4. Markdown 渲染：
+- 确保 Markdown 内容使用 Tailwind Typography 插件 (`@tailwindcss/typography`) 进行美化排版 (prose 样式)。
+
+请帮我配置好 Collection，并生成博客列表页和详情页的模板代码，最后提供一个 Markdown 文件的 Demo。
+
+
+
+确认所有非英语语言，都已经在 src/i18n/ui.ts 里为对应语言补全完整的首页内容各功能卡片本地内容。
+请你修复后检测各语种，确保各语种本地内容都已经完成。
+
+
