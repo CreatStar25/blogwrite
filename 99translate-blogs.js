@@ -247,10 +247,12 @@ async function processSingleFile(fullSourcePath, fullTargetPath, langCode, targe
 
             if (!translated.startsWith('---') && rawContent.startsWith('---')) throw new Error('丢失 Frontmatter');
 
-            const finalContent = translated.replace(
+            let finalContent = translated.replace(
                 /^lang:\s*["']?[\w-]+["']?/m,
                 `lang: "${langCode}"`
             );
+            // 翻译后的 md 删除 slug 行（仅改写入内容，源文件不改）
+            finalContent = finalContent.replace(/^\s*slug:\s*[^\n]+\n/gm, '');
 
             fs.writeFileSync(fullTargetPath, finalContent, 'utf-8');
             console.log(`✅ [${langCode}] 保存成功`);
