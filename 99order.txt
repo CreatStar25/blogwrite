@@ -3,6 +3,8 @@
 
 @deepseek4hk.txt
 @seedance.txt
+@veo3hk.txt
+@sunohk.txt
 
 具体步骤：
 1、媒体处理：请先为任务中的原始媒体文件构思 SEO 友好的新名称。
