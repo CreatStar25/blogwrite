@@ -209,7 +209,7 @@ Execution_Steps:
   4. 【撰写博文】：
      - 撰写高质量 MD文件。
      - **关键点**：文章内引用的图片/视频地址必须为：[Online_Media_Prefix] + [新文件名]。
-     - **Frontmatter**：包含 title, description, tags, pubDate, heroImage (线上地址)。**不生成 slug 字段**（导出文件名仍为 `[Slug].md`，但 MD 正文的 frontmatter 内不写入 slug）。
+     - **Frontmatter**：包含 title, description, tags, pubDate, heroImage (线上地址)。**不生成 slug 字段**（导出文件名仍为 `[Slug].md`，但 MD 正文的 frontmatter 内不写入 slug）。**格式要求**：frontmatter 必须以单独一行的 `---` 开始，并以单独一行的 `---` 结束（第二个 `---` 后换行再写正文），确保 YAML 闭合，避免文章无法加载。
      - **超链接**：文章中要有明显的“立刻使用Deepseek4”按钮，链接到:https://app.suno.hk/
 
   5. 【MD 导出】：
