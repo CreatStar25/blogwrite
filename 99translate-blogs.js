@@ -5,7 +5,7 @@
  * 1. 扫描 0_md_out/ 下各子文件夹内的 .md，根据子文件夹名与 frontmatter 的 lang，将 md 复制到 GitHub 同名项目的博客指定语种目录（源文件保留，便于核对）。
  * 2. 将复制后的 md 翻译到该项目的其他语种（本土化表达、术语保留、不破坏 Markdown、保留链接）。
  *
- * 配置：API_KEY、可选 TASKS 覆盖（见下方）。
+ * 配置：在项目根目录的 .env 中设置 DEEPSEEK_API_KEY（.env 已加入 .gitignore，不会同步到 GitHub）；可选 TASKS_OVERRIDE 见下方。
  */
 
 import https from 'https';
@@ -13,14 +13,32 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// ================= ⚙️ 用户配置 =================
-
-/** 🔴 [必填] DeepSeek API Key */
-const API_KEY = "sk-5acf0534b59a43a1990bbb37f4113fe1";
-
-/** 0_md_out 所在目录（blogwrite 根目录） */
 const __filename = fileURLToPath(import.meta.url);
 const ROOT_DIR = path.dirname(__filename);
+
+/** 从项目根目录加载 .env 到 process.env（不依赖 dotenv 包） */
+function loadEnv() {
+    const envPath = path.join(ROOT_DIR, '.env');
+    if (!fs.existsSync(envPath)) return;
+    const content = fs.readFileSync(envPath, 'utf-8');
+    for (const line of content.split(/\r?\n/)) {
+        const trimmed = line.trim();
+        if (!trimmed || trimmed.startsWith('#')) continue;
+        const eq = trimmed.indexOf('=');
+        if (eq === -1) continue;
+        const key = trimmed.slice(0, eq).trim();
+        let val = trimmed.slice(eq + 1).trim();
+        if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'")))
+            val = val.slice(1, -1);
+        process.env[key] = val;
+    }
+}
+loadEnv();
+
+// ================= ⚙️ 用户配置 =================
+
+/** DeepSeek API Key（从 .env 的 DEEPSEEK_API_KEY 读取，勿提交到仓库） */
+const API_KEY = process.env.DEEPSEEK_API_KEY || '';
 
 /** 存放待导出 md 的目录（子文件夹名 = 项目名） */
 const MD_OUT_DIR = path.join(ROOT_DIR, '0_md_out');
@@ -327,8 +345,8 @@ async function processTaskItem(task, index, total) {
 }
 
 async function main() {
-    if (!API_KEY || API_KEY.includes('sk-xxx')) {
-        console.error('🛑 请先配置 API_KEY');
+    if (!API_KEY || API_KEY.trim() === '') {
+        console.error('🛑 请在项目根目录 .env 中配置 DEEPSEEK_API_KEY（可参考 .env.example）');
         process.exit(1);
     }
 

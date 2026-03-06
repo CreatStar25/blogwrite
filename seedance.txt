@@ -1,102 +1,141 @@
 
-申请发票
+# ============================================================
+# 第一部分：全局导出与 SEO 配置
+# ============================================================
+Project_Config:
+  Name: "seedance"
+  Base_Language: "zh"
+  # 媒体引用的线上 CDN 前缀 (博文中将直接使用此地址)
+  Online_Media_Prefix: "https://img.seedance22.com/aiweb/" 
 
-年终奖发放
-报销
+# 指定生成后的文件存放位置 (非项目目录，用于后续脚本处理)
+Export_Directory:
+  Markdown: "/Documents/Github/blogwrite/0_md_out/seedance"   # 存放生成的中文母本 .md
+  Media: "/Documents/Github/blogwrite/1_media_out"  # 存放重命名后的本地图片/视频
 
-打款主体问询，算算，许昌
+# ============================================================
+# 第二部分：当前文章详细需求 (Current Task)
+# ============================================================
+Article_Info:
+  Title: "Seedance 2.0 官网入口在哪？最新地址汇总"
+  Keywords: ["Seedance 2.0 官网入口", "Seedance 2.0"]
+  Description: "auto" # 请你根据写作的内容，拟一个seo友好的描述。
+  Tags: ["auto", "auto"]
+  pubDate:"auto" 
+  lang: "zh-cn" #请使用此处的语种来写md文件；该字段需要写到md文件
 
-其他项目上线，谷歌统计，页面完善，博文
+# 原始素材：请 Cursor 读取此处的本地路径；如果原始图片或者视频文件不存在，就无需改名操作，无需引用。如果文件存在，就必须在文章适当位置引用。
+Media_Assets:
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/se1.png" # 原始图片位置；该图片既做封面图，也做文章内容插图
+    Type: "Cover"
+    SEO_Name: "auto" # 自动生成如: keywords-cover.png
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/se2.png"
+    Type: "In-Article"
+    SEO_Name: "auto"
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/se1.mp4" #如存在，则需要在文章合适位置引用该视频文件
+    Type: "Video"
+    SEO_Name: "auto"
 
-openclaw
+References: |
+  - 
+Seedance2.0是什么!
+Seedance是字节跳动推出的AI视频生成模型~ 这玩意简直是不得了啊，现在刚出来不久就已经超越了很多AI生成视频模型, 我估计大家已经在短视频上刷到很多有趣的AI视频了吧，其实都是使用的它来生成的!
 
-limax支付
+官网地址
 
-国内支付宝切走
-mj站点扫码，切换为海外支付
-
-
-
-今天可以把
-seedance2.hk
-nanobananapro.hk
-nanobanana2.xin
-
-三个上线了
-
-
-
-https://www.notebooklm.vip
-
-
-
-
-https://img.openclawd.hk/aiweb/openlaw5.png
-https://img.openclawd.hk/aiweb/openlaw6.png
-https://img.openclawd.hk/aiweb/openlaw7.png
-
-----
-
-
-任务：高精度复刻【竞品网站URL：https://nanobanana2.org/】的核心页面模块，用于我的项目开发。
-核心要求：
-1. 复刻范围与细节：
-   - 导航栏：1:1还原布局（包括logo位置、菜单层级、下拉列表样式），实现hover变色、移动端折叠菜单（汉堡按钮）交互；
-   - 主页模块：还原banner轮播效果、产品卡片的hover动效、核心数据展示模块的样式；
-   - 底部栏：还原布局+点击跳转逻辑（链接用#占位），保留原网站的版权信息格式（替换为我的项目名称）；
-   - 博客板块：复刻列表页的分页功能、筛选功能、博客卡片样式，以及详情页的排版（标题/正文/评论区结构）。
-2. 技术规范：
-   - 框架：Astro + Tailwind CSS；
-   - 样式：严格匹配原网站的颜色值（RGB/十六进制）、字体（如Inter/微软雅黑）、间距（px/rem统一）；
-   - 性能：避免冗余代码，导航栏/底部栏封装为可复用组件，博客列表支持虚拟列表（若数据量大）；
-   - 兼容性：适配Chrome/Firefox/Safari主流浏览器，兼容移动端375px-1920px宽度。
-3. 输出格式：
-   - 每个组件附带注释说明核心逻辑，提供组件使用示例（如如何引入、传参）；
-   - 给出完整的package.json依赖清单，以及启动/运行说明。
-
-
-Role: 你是一个资深的 Astro 框架前端专家和 UI/UX 设计师。
-Task: 请帮我初始化当前 Astro 项目，并配置极其健壮的多语言 (i18n) 路由系统。
-
-技术栈：
-- Astro
-- Tailwind CSS (用于样式)
-- React (如果需要复杂的交互组件可以引入，否则优先使用纯 Astro 组件)
-
-需求细节：
-1. 语言支持：需要支持 24 种语言。
-语言列表及其代码：English (en, 默认语言), 简体中文 (zh-cn), 繁体中文 (zh-tw), 西班牙语 (es), 阿拉伯语 (ar), 葡萄牙语 (pt), 印度尼西亚语 (id), 马来语 (ms), 法语 (fr), 俄语 (ru), 印地语 (hi), 日语 (ja), 德语 (de), 韩语 (ko), 土耳其语 (tr), 越南语 (vi), 泰语 (th), 意大利语 (it), 波斯语 (fa), 荷兰语 (nl), 波兰语 (pl), 瑞典语 (sv), 乌克兰语 (uk), 罗马尼亚语 (ro)。
-2. 路由策略：
-- 默认语言 (en) 放在根目录，例如 `/` 或 `/about`。
-- 其他语言使用子目录，例如 `/zh-cn/`, `/zh-cn/about`。
-3. 结构要求：
-- 请使用 Astro 内置的 i18n 路由功能。
-- 创建一个集中的语言配置文件 (例如 `src/i18n/ui.ts` 或 `consts.ts`) 来管理基础的 UI 翻译词条。
-- 实现一个全局的语言切换器组件 (LanguagePicker)。
-
-请先完成项目的依赖安装、配置文件 (astro.config.mjs) 更新以及基础的目录结构搭建。完成后告诉我。
-
-
-Task: 在现有的 Astro 项目中，添加支持 24 种语言的 Markdown 博客系统。
-
-参考设计：https://seadanceai.com/blog
-
-具体开发要求：
-1. Content Collections 配置：
-- 在 `src/content/config.ts` 中定义 `blog` 的 Schema（包含 title, description, pubDate, coverImage, tags, lang 等字段）。
-2. 目录结构：
-- 在 `src/content/blog/` 下根据 24 种语言创建子文件夹（例如 `src/content/blog/en/`, `src/content/blog/zh-cn/` 等）。
-3. 博客路由：
-- 博客列表页：例如 `/blog/` (默认英文), `/zh-cn/blog/`。请展示该语言下的所有博客文章卡片。卡片设计请参考上面提供的竞品链接。
-- 博客文章详情页：实现动态路由生成 (getStaticPaths)，路径类似于 `/blog/[slug]` 或 `/zh-cn/blog/[slug]`。
-4. Markdown 渲染：
-- 确保 Markdown 内容使用 Tailwind Typography 插件 (`@tailwindcss/typography`) 进行美化排版 (prose 样式)。
-
-请帮我配置好 Collection，并生成博客列表页和详情页的模板代码，最后提供一个 Markdown 文件的 Demo。
+https://seed.bytedance.com/zh/seedance2_0
 
 
 
-确认所有非英语语言，都已经在 src/i18n/ui.ts 里为对应语言补全完整的首页内容各功能卡片本地内容。
-请你修复后检测各语种，确保各语种本地内容都已经完成。
+并且Seedance 2.0这几天 已经在国外炸开锅了~ 它的多模态参考能力简直爆表~
+
+这是要完全是要颠覆电影行业的节奏啊~
 
 
+
+这个国产的AI视频生成大模型目前已经被称之为地表最强AI视频生成模型
+
+它的视频生成质量,还是视频运镜的手法，还是提示词的理解程度，可以说方方面面都强过了国外的AI视频生成模型~
+
+
+
+Seedance 甚至强大到被老美强制叫停~😅
+
+
+
+那还等什么呢，我们就不废话了，赶紧看看如何使用!
+
+Seedance2.0 接入平台使用渠道
+目前，Seedance2.0模型本身已经接入了以下平台，大家可以通过这些入口直接体验~
+
+即梦AI
+官网地址: https://jimeng.jianying.com
+
+在视频生成界面选择Seedance 2.0模型就可以使用了!
+
+如图
+
+
+
+手机端APP 也是同理，视频生成中选择S2.0即可
+
+如图
+
+
+
+这里注意一下，上传素材的时候，暂不支持真人的人脸~按需使用吧!
+
+豆包AI
+官网地址: https://www.doubao.com/
+
+在对话框中直接点击视频生成, 选择Seedance 2.0入口即可使用
+
+
+Seedance 2.0 火爆全网，给大家整理了 7 个体验入口，建议收藏。
+
+1. 即梦官网
+官方主阵地，功能最全。每天送 66 免费积分，够生成一个 11 秒视频。
+网址：jimeng.jianying.com
+
+2. 即梦 APP
+手机端体验，随时随地可用。选择「视频生成」里的 S2.0 Fast 模型即可。
+
+3.豆包网页版
+在「AI 创作」里切换到「视频生成」，选 Seedance 2.0 模型。
+网址：doubao.com/chat/create-image
+
+4. 豆包 APP
+和网页版同步上线，目前是 Fast 版本。
+
+5. 火山方舟体验中心
+偏技术向，提供 50 万免费 token，适合想深度体验的用户。
+网址：volcengine.com/experience/ark
+
+今天，我们正式发布新一代视频创作模型 Seedance 2.0。
+Seedance 2.0 采用统一的多模态音视频联合生成架构，支持文字、图片、音频、视频四种模态输入，集成了目前业界最全面的多模态内容参考和编辑能力。
+相比 1.5 版本，Seedance 2.0 的生成质量大幅提升，其在复杂交互和运动场景下的可用率更高，物理准确度、逼真度、可控性显著增强，更加贴合工业级创作场景的需求。
+其核心亮点如下：
+
+复杂场景下更高可用率：凭借出色的运动稳定性和物理还原能力，模型在多主体交互和复杂运动场景中表现出色，生成可用率达到业界 SOTA 水平。
+多模态能力显著强化：基于统一的多模态音视频联合架构训练，支持混合模态输入，允许用户同时输入多达 9 张图片、3 段视频、3 段音频以及自然语言指令，模型可参考输入素材中的构图、动作、运镜、特效、声音等元素，打破传统视频生成的素材边界。
+视频生成可控性大幅提升：模型的指令遵循与一致性表现全面提升，并支持稳定可控的视频延长、视频编辑，让普通用户也能像导演一样，轻松掌控视频创作全流程。
+深度支持工业级内容创作：模型支持 15 秒高质量多镜头音视频输出，具备双声道音频能力，可实现极致拟真的视听效果，配合参考和编辑能力，能大幅降低影视、广告、电商、游戏等场景的内容制作成本。
+目前，Seedance 2.0 已上线即梦AI、豆包等平台，欢迎体验和反馈。
+
+# ============================================================
+# 第三部分：Cursor 执行步骤 (Execution SOP)
+# ============================================================
+Execution_Steps:
+  1. 【创建目录】：如果 [Export_Directory] 下的文件夹不存在，请先创建。
+  2. 【命名决策】：结合 Title 和 Keywords，为 [Media_Assets] 生成 SEO 友好的新文件名。
+  3. 【媒体导出】：
+     - **动作**：将 [Original_Path] 的文件复制(cp)到 [Export_Directory.Media]。
+     - **重命名**：在复制过程中，使用新生成的 SEO 文件名。
+  4. 【撰写博文】：
+     - 撰写高质量中文 MD 文件。文件请以 @99demo.md 为范本，图片引用方式等技术细节，使用范本中的方案。
+     - **关键点**：文章内引用的图片/视频地址必须为：[Online_Media_Prefix] + [新文件名]。
+     - **Frontmatter**：包含 title, description, slug, tags, pubDate, heroImage (线上地址)。
+     - **超链接**：文章中要有明显按钮，按钮文案：“立刻使用Seedance”，按钮链接到:https://creat.seedance22.com/generate/video-tools/seedance2.0
+
+  5. 【MD 导出】：
+     - 将生成的 MD 文件存入 [Export_Directory.Markdown]，文件名为 `[Slug].md`。
