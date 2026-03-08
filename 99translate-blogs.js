@@ -100,6 +100,49 @@ function getLangFromFrontmatter(content) {
     return langM ? langM[1].trim() : null;
 }
 
+/**
+ * 验证并修复 MD 的 frontmatter 格式，使其符合 Astro 规范：
+ * - 必须以单独一行的 `---` 开始
+ * - 必须以单独一行的 `---` 结束，且第二个 `---` 后换行再写正文
+ * @returns {{ content: string, fixed: boolean }}
+ */
+function validateAndFixFrontmatter(content) {
+    const lineEnding = content.includes('\r\n') ? '\r\n' : '\n';
+    let fixed = false;
+    let out = content;
+
+    // 1. 确保开头是单独的 ---（无前导空白）
+    if (!out.startsWith('---')) {
+        const firstLine = out.split(/\r?\n/)[0] || '';
+        if (firstLine.match(/^[\w-]+:\s*/)) {
+            out = '---' + lineEnding + out;
+            fixed = true;
+        }
+    } else if (out.match(/^[\s]+---/)) {
+        out = out.replace(/^[\s]+/, '');
+        fixed = true;
+    }
+
+    // 2. 定位 closing ---（行首的 ---，即 \n--- 或 \r\n---）
+    const openMatch = out.match(/^---\r?\n/);
+    if (!openMatch) return { content: out, fixed };
+    const openLen = openMatch[0].length;
+    const afterOpen = out.slice(openLen);
+    const closeMatch = afterOpen.match(/\r?\n---\s*(\r?\n)?/);
+    if (!closeMatch) return { content: out, fixed };
+
+    const endOfDelim = closeMatch.index + closeMatch[0].length;
+    let body = afterOpen.slice(endOfDelim);
+    // 3. 第二个 --- 后必须有换行再接正文
+    if (body.length > 0 && body[0] !== '\n' && body[0] !== '\r') {
+        body = lineEnding + body;
+        out = out.slice(0, openLen) + afterOpen.slice(0, endOfDelim) + body;
+        fixed = true;
+    }
+
+    return { content: out, fixed };
+}
+
 /** 扫描 0_md_out：返回 { projectDir, relativePath, sourceLangCode }[]，并已执行复制（源文件保留） */
 function scanAndMoveMdFromExport() {
     const tasks = [];
@@ -271,6 +314,11 @@ async function processSingleFile(fullSourcePath, fullTargetPath, langCode, targe
             );
             // 翻译后的 md 删除 slug 行（仅改写入内容，源文件不改）
             finalContent = finalContent.replace(/^\s*slug:\s*[^\n]+\n/gm, '');
+
+            // 验证并修复 frontmatter 格式（Astro：--- 单独成行、闭合后换行再写正文）
+            const { content: validatedContent, fixed } = validateAndFixFrontmatter(finalContent);
+            finalContent = validatedContent;
+            if (fixed) console.log(`🔧 [${langCode}] 已修复 frontmatter 格式`);
 
             fs.writeFileSync(fullTargetPath, finalContent, 'utf-8');
             console.log(`✅ [${langCode}] 保存成功`);

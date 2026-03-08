@@ -2,9 +2,11 @@
 处理完毕后再读取下一个文件，执行文件内的任务。
 
 @deepseek4hk.txt
+@gemini3hk.txt@bananavip.txt@nanobanana2xin.txt@seedance2hk.txt
 @seedance.txt
 @veo3hk.txt
 @sunohk.txt
+
 
 具体步骤：
 1、媒体处理：请先为任务中的原始媒体文件构思 SEO 友好的新名称。
@@ -14,3 +16,14 @@
 5、导出文件：将 MD 文件以 [Slug].md 命名，存入 Export_Directory.Markdown。
 
 请在执行前打印出新文件改动，然后执行。
+
+
+-------------------------------------
+-------------------------------------
+
+@gemini3hk.txt@bananavip.txt@nanobanana2xin.txt@seedance2hk.txt
+
+@deepseek4hk.txt
+@seedance.txt
+@veo3hk.txt
+@sunohk.txt
