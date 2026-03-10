@@ -1,0 +1,658 @@
+
+# ============================================================
+# 第一部分：全局导出与 SEO 配置
+# ============================================================
+Project_Config:
+  Name: "nanobananaocom"
+  Base_Language: "zh-cn"
+  # 媒体引用的线上 CDN 前缀 (博文中将直接使用此地址)
+  Online_Media_Prefix: "https://img. nanobananao.com/aiweb/" 
+
+# 指定生成后的文件存放位置 (非项目目录，用于后续脚本处理)
+Export_Directory:
+  Markdown: "/Documents/Github/blogwrite/0_md_out/nanobananaocom"   # 存放生成的中文母本 .md
+  Media: "/Documents/Github/blogwrite/1_media_out"  # 存放重命名后的本地图片/视频
+
+# ============================================================
+# 第二部分：当前文章详细需求 (Current Task)
+# ============================================================
+Article_Info:
+  Title: "nanobanana2快速上手方法：3步生成高质量图片"
+  Keywords: ["nanobanana2 快速上手", "nanobanana pro"]
+  Description: "auto" # 请你根据写作的内容，拟一个seo友好的描述。
+  Slug: "auto" # 根据标题/文章主题拟订，作为导出的 .md 文件名，须与主题一致（如 nanobanana-ai-generator-guide）。
+  Tags: ["auto", "auto"]
+  pubDate:"auto" 
+  lang: "zh-cn" #请使用此处的语种来写md文件；该字段需要写到md文件
+
+# 原始素材：请 Cursor 读取此处的本地路径；如果原始图片或者视频文件不存在，就无需改名操作，无需引用。如果文件存在，就必须在文章适当位置引用。
+Media_Assets:
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/nc1.png" # 原始图片位置；该图片既做封面图，也做文章内容插图
+    Type: "Cover"
+    SEO_Name: "auto" # 自动生成如: keywords-cover.png
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/nc2.png"
+    Type: "In-Article"
+    SEO_Name: "auto"
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/nc3.mp4" #如存在，则需要在文章合适位置引用该视频文件
+    Type: "Video"
+    SEO_Name: "auto"
+
+References: |
+
+
+Nano Banana 2 来了：能“思考”的“闪电般”AI生图，21个场景解析及实战提示词
+Google前几天发布了Nano Banana 2，也就是 Gemini 3.1 Flash Image（预览版），这是Gemini 3系列中专注于图像生成的模型。这个模型在 AI 生图圈子里引起了不少讨论。
+它的特点是速度快、价格低，生成一张 4K 图只要 4 到 6 秒，费用约 0.15 美元。对于需要大量出图的人来说，这个性价比挺有吸引力的。
+和之前AI生图工具不同，Nano Banana 2主打"会思考的图像生成"——不是一键出图，而是先规划、再生成、后审查。
+可以简单地说： Nano Banana 2既有闪电般的速度，又有专业级的画质。
+最近花了几天时间，把能找到的相关资料大部分都过了一遍，也实际测试了不少提示词。有些生成效果确实挺让人意外的。
+这篇文章整理了我目前觉得比较实用的部分——20多个提示词示例及场景方向，基本都是可以直接上手试的实战级内容。
+
+01
+Nano Banana 2是什么？
+图片
+
+先明确一下：Nano Banana 2 是 Google 最新推出的原生多模态图像生成模型，集成在Gemini 3系列中，它是前代 Nano Banana 的升级版，而不是 Nano Banana Pro 的升级版。
+它不仅生成速度飞快，多语言文字处理更强，还能实时联网，一次直出4K大片。最关键的是，它相比Nano Banana Pro价格几乎减半，更具备性价比。
+
+02
+Nano Banana 2的主要特点
+图片
+
+1. 速度快，4K 图 4-6 秒出图
+官方数据显示 Nano Banana 2 比上一代快了近 4 倍。实际使用中，生成一张 4K 图确实只需要 4 到 6 秒。
+这个速度对于需要快速迭代的工作流程很有帮助，比如做社交媒体内容、广告素材测试等场景。
+2. 世界知识加持，理解能力更强
+Nano Banana 2 接入了 Gemini 的知识库，还能实时搜索网页信息。
+这意味着它知道"东方明珠广播电视塔"长什么样，画出来的塔结构准确，周围建筑也符合实际情况。你让它画《枫桥夜泊》的水墨画，它不仅能画出意境，还能写出诗句。
+3. 主体一致性提升
+Nano Banana 2 单次生成最多能保持 5 个角色的脸部一致，或者 14 个物品的形态不变。
+对于做连载漫画、产品系列图的人来说，这个功能挺实用的。
+4. 文字渲染能力改善
+相比之前的模型，Nano Banana 2 在文字生成方面有明显进步。它能生成清晰可读的文字，还能按命令进行翻译和本地化。
+5. 价格有竞争力
+更关键的是，Nano Banana 2 的 API 价格比 Pro 版本便宜 30% 到 50%，也就是它的价格直接砍半，输出价格只要0.0672美元/张（1K分辨率），仅为Pro的一半，折合人民币大概0.46元。
+普通用户 24 小时内能免费生成 100 张，Pro 订阅用户可达 1000 张。
+6. 和Pro的版本定位差异
+Nano Banana 2 对比 Nano Banana Pro，两个版本定位不同：
+Nano Banana 2 适合：
+需要快速出图，效率优先
+社交媒体内容、日常配图
+成本敏感，需要大批量生成
+对画质要求不是极致
+Nano Banana Pro 适合：
+需要最高保真度
+专业视觉设计、影视概念设计
+需要极致的复杂场景把控
+文字渲染准确率要求 94% 以上
+当然，它也不是完美，比如存在长文本偶尔出错、个别古诗词重复、部分复杂场景会"偷懒"、风格混搭偶尔翻车等问题，需要使用的时候采取一些规避手段，比如尽可能控制文本块字符数、角色数量适当控制、尽可能一次只用一个主风格、未达预期多尝试几次或者让继续修改等。
+
+03
+20+实用提示词及场景解析
+图片
+
+场景1：物理精度测试——时钟+满杯红酒
+适用场景：
+测试AI模型物理推理能力
+高精度产品展示图
+写实摄影风格验证
+应用价值：
+这是AI生图界的"高考题"。Grok、ChatGPT、豆包Seedream 4.5等模型在这类测试中普遍翻车。需要同时处理时针分针的精确位置、液体的表面张力、光线的折射角度。
+Nano Banana 2优势：
+Deep Think模式会先计算11:15时指针位置→规划液面边界→模拟光线效果→自我审查修正。这不是靠"猜"，而是靠"算"。
+图片
+
+
+英文提示词：
+
+
+A high-quality photograph of a clock showing exactly 11:15, with a wine glass filled to the very brim with red wine beside it. The clock face should be clearly visible with precise hour and minute hands. Natural lighting, photorealistic style.
+中文提示词：
+
+
+一张高质量照片，时钟准确指向11:15，旁边有一杯满到杯口边缘的红酒。时钟表盘清晰可见，时分针位置精确。自然光线，写实摄影风格。
+场景2：精准文字渲染——古诗意境水墨画
+适用场景：
+文化宣传（国潮设计海报）
+教育内容（古诗词配图）
+文化产品包装
+书法风格视觉（艺术装饰）
+应用价值：
+AI生图中的汉字一直是痛点，笔画错乱、字形崩坏是常态。Nano Banana 2的中文渲染能力是核心亮点之一。
+Nano Banana 2优势：
+支持多种书体风格（楷书、行书、草书、隶书），理解汉字结构，正确渲染笔画顺序。
+图片
+英文提示词：
+
+
+Generate a long handscroll of a green-blue landscape painting from the Southern Song Dynasty, with a colophon by Su Shi titled "Written on the Wall of West Forest Temple".
+中文提示词：
+
+
+生成一幅南宋时期的青绿山水画长卷，有苏轼《题西林壁》题跋。
+图片
+英文提示词：
+
+
+A vertical Chinese calligraphy scroll on aged rice paper, featuring the Tang Dynasty poem "静夜思" by Li Bai. Elegant running script with visible brush strokes. Red seal stamp at bottom. Soft natural lighting from window, subtle paper texture visible.
+中文提示词：
+
+
+竖版中国书法卷轴，书写唐代李白《静夜思》。优雅行书，可见笔触痕迹。底部红色印章。窗边柔和自然光，可见细腻纸张纹理。
+进阶——指定书体：
+楷书：regular script
+行书：running script
+草书：cursive script
+隶书：clerical script
+场景3：角色一致性——多图保持统一
+适用场景：
+漫画/绘本制作
+品牌IP形象
+连续性视觉内容
+人物设定集
+应用价值：
+做漫画、做IP时最头疼的就是角色在不同图里长得不一样。Nano Banana 2支持最多5个角色在多张图中保持外貌一致。
+Nano Banana 2优势：
+会记住角色的关键特征（发型、服装、配饰等），在不同场景中保持一致。建议控制在3个角色以内效果最好。
+第一步：定义角色
+图片
+
+英文提示词：
+
+
+Create a character reference sheet for a 25-year-old Asian female designer named "Lin". Shoulder-length black hair, round glasses, beige minimalist clothing. Show front view, side view, working at desk. White background.
+中文提示词：
+
+
+创建角色设定图，25岁亚裔女设计师"Lin"。齐肩黑发，圆框眼镜，米色极简服装。展示正面、侧面、工作状态。白底。
+第二步：在其他场景使用
+图片
+英文提示词：
+
+
+Lin, the 25-year-old Asian female designer with shoulder-length black hair and round glasses, is presenting her work in a modern conference room. Same beige minimalist outfit. Standing beside large screen showing design mockups.
+中文提示词：
+
+
+Lin，25岁齐肩黑发圆框眼镜的亚裔女设计师，在现代会议室展示作品。同样的米色极简服装。站在大屏幕旁，屏幕显示设计稿。
+场景4：连续故事板——多格连贯剧情
+适用场景：
+分镜脚本
+绘本故事
+广告短片
+社交媒体系列内容
+应用价值：
+通过一轮对话生成多张剧情连贯的图片，这是Deep Think能力的直观应用。
+Nano Banana 2优势：
+理解时间线概念，保持场景和光线、色调的一致性，自动处理转场逻辑。比逐张生成效率更高。
+图片
+英文提示词：
+
+
+Create a 4-panel storyboard showing morning routine: Panel 1: Young woman wakes up in sunlit bedroom, stretching. 7:00 AM clock on nightstand. Panel 2: In kitchen making pour-over coffee, steam rising. Morning light through window. Panel 3: Working at minimalist desk with laptop, focused expression. Coffee cup beside her. Panel 4: Walking out door with headphones, city background. Style: Warm lifestyle photography, consistent palette (accents: terracotta, sage green).
+中文提示词：
+
+
+创建4格故事板展示晨间日常：
+
+第1格：年轻女性在阳光卧室醒来，伸懒腰。床头7:00闹钟。
+
+第2格：厨房做手冲咖啡，蒸汽升起。晨光透窗。
+
+第3格：极简书桌前用笔记本工作，专注。旁边咖啡杯。
+
+第4格：戴着耳机出门，城市背景。
+
+风格：温暖生活摄影，统一配色（强调色：陶土红、鼠尾草绿）。
+
+场景5：艺术风格——刺绣肖像+双重曝光
+适用场景：
+艺术创作
+个性化礼物
+文化产品
+文创设计
+艺术海报
+音乐专辑封面
+应用价值：
+模拟传统工艺的质感，以及双重曝光的艺术效果。这需要对传统工艺和摄影技法的深度理解。
+Nano Banana 2优势：
+理解刺绣的工艺特点，正确模拟针脚纹理。对双重曝光的边界处理丝滑自然。
+图片
+刺绣肖像提示词：
+英文提示词：
+
+
+An embroidered portrait of a young woman, colorful silk threads on deep linen fabric. Visible needlework, layered textures, and handmade patterns give it an earthy, sacred feel. The threads should create realistic shading and depth through different stitch directions and colors.
+中文提示词：
+
+
+一幅年轻女性的刺绣肖像，深色亚麻布上用彩色丝线绣制。可见的针脚、层叠的纹理和手工图案赋予它质朴、神圣的感觉。线迹应通过不同的缝合方向和颜色创造出逼真的阴影和深度。
+图片
+双重曝光提示词：
+英文提示词：
+
+
+Stunning double exposure portrait combining woman's silhouette with misty mountain forest. Her hair blends seamlessly into pine tree canopies. Crescent moon sits where her eye would be. Deep teal and warm amber colors. Film grain texture, high contrast.
+中文提示词：
+
+
+惊艳双重曝光人像，女性轮廓与迷雾山林融合。头发与松树冠无缝融合。新月出现在眼睛位置。深青色和暖琥珀色。胶片颗粒质感，高对比度。
+场景5：中国风设计——青花瓷风格
+适用场景：
+国潮产品设计
+文创产品包装
+中式茶具/餐具设计
+中国风品牌视觉
+应用价值：
+青花瓷是中国传统文化的经典元素。Nano Banana 2能准确理解青花瓷的材质特征——釉面质感、钴蓝色调、细微裂纹。
+Nano Banana 2优势：
+精准模拟陶瓷釉面的光泽感，正确渲染钴蓝色渐变，表现老化瓷器的细微裂纹纹理。避免"塑料感青花"的尴尬。
+图片
+英文提示词：
+
+
+An embroidered portrait of a young woman, crafted with colorful silk threads on deep linen fabric. Visible stitching, layered textures, and handmade patterns evoke an earthy, sacred feel, with realistic shading and depth.
+
+Transform this image into traditional Chinese blue-and-white porcelain style: delicate cobalt blue patterns on a white glazed ceramic surface, featuring classic motifs such as dragons, clouds, and flowers. The texture should exhibit the subtle crackle of aged porcelain and a realistic ceramic sheen.
+
+中文提示词：
+
+
+一位年轻女性的刺绣肖像，以彩色丝线绣于深色亚麻布上。针脚可见，纹理层叠，手工图案营造质朴神圣感，并呈现逼真的阴影与深度。
+
+将其转化为传统中国青花瓷风格：白色釉面陶瓷表面饰以精致钴蓝色图案，包含龙、云、花卉等经典纹样。纹理应展现老化瓷器的细微裂纹与逼真的陶瓷光泽。
+
+场景6：真实界面模拟——Windows界面+YouTube
+适用场景：
+产品原型展示
+UI设计参考
+教程配图
+真实场景演示
+应用价值：
+Nano Banana 2可以调用Google搜索获取真实世界信息。画YouTube页面时，会先搜索YouTube的logo和页面布局。生成的截图几乎可以以假乱真。
+Nano Banana 2优势：
+搜索增强功能确保logo正确、页面元素位置准确。任务栏图标、窗口控件都能正确渲染。
+图片
+英文提示词：
+
+
+Generate a realistic screenshot of YouTube homepage on Windows 11. Browser shows video thumbnail from MrBeast channel. YouTube logo, navigation bar, video grid should look authentic.
+中文提示词：
+
+
+生成Windows 11上YouTube主页真实截图。浏览器显示MrBeast频道视频缩略图。YouTube logo、导航栏、视频网格应看起来真实。
+场景7：新闻直播场景——主播+跑马灯
+适用场景：
+新闻媒体内容
+视频封面
+品牌宣传
+应用价值：
+新闻直播场景需要同时处理主播形象、背景屏幕文字、底部跑马灯。这是典型的"多元素场景"测试。
+Nano Banana 2优势：
+文字渲染清晰，跑马灯内容准确，主播形象专业。整体画面有真实新闻直播的感觉。
+图片
+英文提示词：
+
+
+50mm big budget live broadcast 8k photograph close-up of an attractive Italian female news anchor age 30. She is at a news desk and on a screen behind her is a bio-engineered Banana with text "Nano Banana 2 Live". Live news shot. There is a red and blue chyron on the bottom of the image that says "Breaking News: Nano Banana 2 Released".
+中文提示词：
+
+
+50mm镜头大制作8K直播照片特写，一位30岁的意大利女主播。她坐在新闻台前，身后屏幕上显示一个生物工程香蕉，配有文字"Nano Banana 2 直播"。新闻直播画面。图像底部有红蓝配色的跑马灯，写着"突发新闻：Nano Banana 2 发布"。
+场景8：电影级质感——时尚杂志封面
+适用场景：
+杂志封面
+品牌广告
+电商主图
+时尚大片
+应用价值：
+Nano Banana 2在真实质感渲染上表现突出。皮肤质感真实，布料材质区分明显，光线过渡自然。
+Nano Banana 2优势：
+理解不同材质的光线反射特性。正确渲染皮肤毛孔细节（不过度）。保持电影级的光影质感。
+图片
+英文提示词：
+
+
+High-fashion magazine cover shot. East Asian model late 20s. Structured black blazer with gold buttons, white silk blouse. Sleek hair, Bold red lip. Confident direct gaze. Gray studio background with soft gradient. Dramatic side lighting. 8K photography, Vogue aesthetic.
+中文提示词：
+
+
+高端时尚杂志封面。20多岁东亚模特。金扣黑色西装，白色丝绸衬衫。光滑发型。大胆红唇。自信直视镜头。灰色影棚背景柔和渐变。戏剧性侧光。8K摄影，Vogue美学。
+场景9：教育可视化——水循环信息图
+适用场景：
+教育科普
+知识付费课程
+公众号配图
+社交媒体知识卡片
+应用价值：
+把复杂概念可视化，而且文字清晰可读。排版清晰、逻辑顺畅。
+Nano Banana 2优势：
+理解科学概念，正确渲染信息图的视觉层次。文字标注清晰，配色舒适。
+图片
+英文提示词：
+
+
+Flat lay photography creating DIY infographic explaining water cycle. Clean light gray background. Visual story flows left to right in clear steps. Simple black arrows hand-drawn. Educational, modern, easy to understand. Top-down view, soft even lighting.
+中文提示词：
+
+
+俯拍照片创建解释水循环的DIY信息图。浅灰背景。视觉故事从左到右清晰流动。手绘黑色箭头引导视线。教育性，现代，易懂。俯视角度，柔和均匀光线。
+场景10：教学图——黑板数学题
+适用场景：
+在线教育
+课程配图
+教学演示
+知识分享
+应用价值：
+不只是写字，是写"能看懂的数学步骤"。对教育内容创作者非常实用。
+Nano Banana 2优势：
+理解数学公式的逻辑，正确渲染解题步骤。粉笔字迹清晰，黑板质感真实。
+图片
+英文提示词：
+
+
+Realistic blackboard with white chalk showing step-by-step solution to quadratic equation x² + 5x + 6 = 0. Clear legible handwriting showing factoring steps. Erased marks, chalk dust for realism. Warm classroom lighting.
+中文提示词：
+
+
+逼真黑板，白色粉笔写一元二次方程x² + 5x + 6 = 0的逐步解题。清晰手写展示因式分解步骤。擦除痕迹，粉笔灰。温暖教室灯光。
+场景11：品牌创意——品牌星球世界
+适用场景：
+品牌营销
+创意提案
+视觉概念
+品牌故事
+应用价值：
+把抽象的品牌概念转化为视觉。把品牌变成一个完整的星球世界，这种创意高度之前需要顶级创意总监才能想出来。
+Nano Banana 2优势：
+理解品牌的核心价值。将品牌元素转化为视觉元素。创造统一且独特的品牌世界。
+图片
+英文提示词：
+
+
+Planet Nike, Year 3025. Distant world shaped by brand essence. Landscapes echo core identity—surreal terrains to fantastical weather. Native flora and fauna embody signature colors. Rivers flow with iconic colors. Architecture inspired by visual language, fused with futuristic tech. Brand logo visible in sky.
+中文提示词：
+
+
+耐克星球，3025年。由品牌精髓塑造的遥远世界。景观呼应核心身份——超现实地形到奇幻天气。原生动植物体现标志性色彩。河流流淌标志性颜色。建筑灵感来自视觉语言，融合未来科技。天空中可见品牌标志。
+场景12：材质创意——玻璃汉堡
+适用场景：
+产品设计
+创意广告
+材质实验
+概念图
+应用价值：
+测试AI的材质转换能力。把整个汉堡都玻璃化，而且光线折射都对。
+Nano Banana 2优势：
+理解不同材质的光学特性。正确渲染玻璃的透明感、折射效果。保持形态完整性。
+图片
+英文提示词：
+
+
+Hamburger made entirely of transparent glass. Every layer—bun, lettuce, tomato, cheese, patty—crafted from clear or tinted glass with realistic light refraction. Subtle reflections and transparency. Simple wooden table, soft natural lighting.
+中文提示词：
+
+
+完全由透明玻璃制成的汉堡包。每一层——面包、生菜、番茄、芝士、肉饼——由透明或彩色玻璃制成，真实光线折射。微妙反射和透明感。简单木桌，柔和自然光。
+场景14：场景氛围——赛博朋克街头
+适用场景：
+游戏概念
+科幻小说封面
+视频背景
+音乐专辑
+应用价值：
+赛博朋克场景需要霓虹灯、雨水、全息广告等多元素协调，而且是文字密集型场景。
+Nano Banana 2优势：
+霓虹灯文字清晰可读，雨水反射效果真实，全息元素协调。整体氛围统一。
+图片
+英文提示词：
+
+
+Rain-soaked cyberpunk alleyway in futuristic Asian megacity. Neon signs in Japanese and Chinese glow pink, blue, orange, reflecting off wet pavement. Lone figure in hooded jacket walks away. Holographic ads float displaying "2099 SALE". Dense cables overhead, steam from grates. Moody cinematic lighting.
+中文提示词：
+
+
+雨水浸湿的赛博朋克巷道，未来亚洲超级都市。日文中文霓虹灯发出粉蓝橙光，倒映在湿路面。穿连帽夹克的孤独身影走远。全息广告悬浮显示"2099 SALE"。头顶密布电缆，格栅升起蒸汽。电影感氛围灯光。
+场景15：技术图纸——建筑蓝图
+适用场景：
+科幻设定
+技术文档
+概念设计
+工程图纸
+应用价值：
+技术图纸需要文字标注清晰，线条精确，整体风格统一。
+Nano Banana 2优势：
+文字标注清晰可读。图纸线条精确。保持技术图纸的专业感。
+图片
+英文提示词：
+
+
+Architectural blueprint of futuristic space station. White lines on dark blue background. Cross-section views, dimension annotations, material callouts labeled "titanium alloy" and "carbon fiber". Technical drawing style with precise geometric shapes, grid lines, title block reading "orbital habitat mk-iv". Engineering precision.
+中文提示词：
+
+
+未来太空站建筑蓝图。深蓝背景白线。剖面图、尺寸标注，材料标签"钛合金"和"碳纤维"。技术图纸风格，精确几何形状，网格线，标题栏"轨道栖息地MK-IV"。工程级精度。
+场景16：文艺质感——手写日记页
+适用场景：
+小说插图
+文艺公众号
+手账设计
+日记风格
+应用价值：
+手写体清晰可读，纸张质感真实，有使用痕迹的感觉。这是"叙事感"的视觉化。
+Nano Banana 2优势：
+理解手写文字的韵律。正确模拟纸张老化的质感。表现使用痕迹。
+图片
+英文提示词：
+
+
+Weathered leather-bound journal open to handwritten page. Cursive writing in blue ink reads: "Day 47: The lighthouse keeper finally spoke. He said the light isn't for the ships—it's for something beneath the waves." Coffee ring stains, dried flower pressed between pages, ink smudges. Warm golden hour lighting.
+中文提示词：
+
+
+风化皮面日记本打开的手写页。蓝色墨水花体字"第47天：灯塔守护者终于开口了。他说灯光不是为船而亮——是为海浪下面的某个东西。"咖啡渍，夹在书页间的干花，墨水涂抹。温暖黄金时刻光线。
+场景17：科学视觉——露珠倒影
+适用场景：
+自然摄影
+科普内容
+壁纸设计
+概念图
+应用价值：
+微观世界的王者。水珠里的倒影景象、光线折射、丝线纤维——三层物理现象同时渲染正确。
+Nano Banana 2优势：
+理解光学原理。正确渲染水珠的透明感和折射效果。表现微观世界的精致。
+图片
+英文提示词：
+
+
+Extreme macro photograph of single dewdrop on spider web strand, reflecting entire sunrise landscape inside the drop. Silk thread shows individual fiber strands. Surrounding droplets slightly out of focus. Reflected landscape inverted by water's surface tension. Dark green bokeh background.
+中文提示词：
+
+
+极端微距摄影，蛛网丝线上的一滴露珠，露珠内倒映完整日出风景。丝线显示单根纤维。周围小水珠略微虚化。主水珠内反射景象因水面张力倒置。深绿色虚化背景。
+场景18：游戏美术——像素城市
+适用场景：
+独立游戏开发
+像素艺术
+社交媒体壁纸
+游戏素材
+应用价值：
+等距视角的透视关系、像素大小一致性、色彩统一感。这种图做游戏素材直接能用。
+Nano Banana 2优势：
+理解等距视角的特点。保持像素风格的一致性。色彩和谐统一。
+图片
+英文提示词：
+
+
+Isometric pixel art view of cozy Japanese small town in autumn. Ramen shop with steam rising. Shinto shrine with red torii gate. Trees with falling orange leaves. Tiny train crossing bridge over stream. Vending machines glowing softly. Cats on rooftops. Warm sunset palette. 16-bit retro game aesthetic. Extremely detailed pixel work.
+中文提示词：
+
+
+等距像素风格日本小镇秋景。冒着热气的拉面店。带红色鸟居的神社。落下橙叶的树木。穿越小桥的迷你火车。柔和发光的自动贩卖机。屋顶上的猫咪。温暖夕阳配色。16位复古游戏美学。极其精细像素画工。
+场景19：移轴摄影——微缩城市
+适用场景：
+城市摄影
+旅行博客
+创意广告
+概念图
+应用价值：
+移轴摄影的精髓在于景深控制和色彩渲染。让真实城市看起来像桌上模型。
+Nano Banana 2优势：
+理解移轴摄影的视觉效果。正确渲染景深和虚化。色彩饱和度适中。
+图片
+英文提示词：
+
+
+Tilt-shift photograph of bustling Tokyo intersection at night. Tiny glowing cars, neon signs, pedestrians appear toy-like. Strong bokeh in foreground and background. Saturated colors. Elevated angle. Magical surreal feel.
+中文提示词：
+
+
+东京繁忙十字路口夜景移轴摄影。微小发光汽车、霓虹灯牌、行人呈现玩具质感。前景背景强烈虚化。色彩饱和。高处俯拍。魔幻超现实感。
+场景20：商业摄影——食物爆炸图+奢侈品广告
+适用场景：
+餐饮营销
+外卖平台
+菜单设计
+高端品牌广告
+电商详情页
+应用价值：
+每层食材的位置、重力感，酱汁流动状态，全都物理正确。奢侈品广告的瓶身文字清晰，液体飞溅效果真实。以前只有顶级商业摄影师+后期团队才能做出来。
+Nano Banana 2优势：
+理解食材的物理特性。正确渲染悬浮感和层次感。理解高端商业摄影的规范，保持奢华感。
+图片
+
+食物爆炸图提示词：
+英文提示词：
+
+
+Exploded view photograph of gourmet burger. Each ingredient layer floating in mid-air perfectly separated: golden sesame bun top, fresh lettuce, bright red tomato, melting cheese, sizzling patty, crispy bacon, onion rings, pickles, sauce drips frozen. White background, studio lighting, commercial food photography.
+中文提示词：
+
+
+美食汉堡爆炸图。每层食材悬浮空中完美分离：金色芝麻面包顶、新鲜生菜、鲜红番茄、融化芝士、滋滋牛肉饼、脆培根、洋葱圈、腌黄瓜、酱汁滴落。白底，影棚灯光，商业食品摄影。
+图片
+
+奢侈品广告提示词：
+英文提示词：
+
+
+Luxury perfume bottle on mirror surface in dark studio. Deep amber crystal bottle with gold cap engraved "ESSENCE No.7". Behind it, explosion of golden liquid, rose and jasmine petals, light particles frozen mid-air. Dramatic rim lighting from both sides—warm gold, cool silver. Mirror reflection visible. Ultra high-end commercial photography, 8K feel.
+中文提示词：
+
+
+奢侈香水瓶立在暗色影棚镜面上。深琥珀色水晶瓶身，金色瓶盖刻着"ESSENCE No.7"。瓶身后方，金色液体、玫瑰茉莉花瓣、光粒子在半空中凝固绽放。两侧戏剧性轮廓光——暖金和冷银。镜面倒影可见。超高端商业摄影，8K质感。
+场景21：岁月留痕——老照片修复
+适用场景：
+
+老照片数字化修复
+历史影像档案整理
+纪念册制作
+影像资料归档
+应用价值：
+最大程度还原老照片原貌，在去除破损痕迹、优化画质的同时，完整保留人物特征与时代氛围，让珍贵影像得以留存，实现“时光回溯”的视觉呈现。
+Nano Banana 2优势：
+精准识别老照片破损细节，严格匹配人物原始特征，避免过度修饰导致的失真；高效去除各类瑕疵，还原自然质感，同时保留老照片独有的时代韵味。
+图片
+上方是原老照片，如下是修复后照片：
+图片
+英文提示词：
+
+
+Restore and enhance this old photo. Strictly preserve the original character's identity, facial structure, facial features proportions, hairstyle, perceived age, expression, posture, composition and perspective unchanged. Remove scratches, creases, stains, noise and compression artifacts. Repair damaged edges and missing details. Correct yellowing and color cast. Enhance contrast and depth. Restore natural skin tones and authentic texture. Skin texture is exquisitely realistic, preserving pores and fine lines, avoiding a plastic, airbrushed look. Hair strands and fabric fibers are clearly visible. Present a high-fidelity, hyper-realistic photo restoration with naturally sharp focus, appropriate depth of field, and crisp yet natural details. Lighting is natural, studio-grade fill light, with clean shadows that are not too dark. Wider dynamic range, HDR, while preserving the vintage photo's original atmosphere and period texture.
+中文提示词：
+
+
+修复并增强这张老照片。严格保留原人物特征与身份一致性，面部结构、五官比例、发型、年龄感、表情、姿态、构图与视角都保持不变。去除划痕、折痕、污渍、噪点与压缩痕迹，修复破损边缘与缺失细节，纠正泛黄与色偏，提升对比与层次，恢复自然肤色与真实质感。皮肤纹理真实细腻，保留毛孔与细小纹理，避免磨皮塑料感；头发丝与衣物纤维清晰可见；整体呈现高保真、超写实的照片修复效果，焦点清晰自然，适度景深，细节锐利但不生硬。光线为自然摄影棚级补光，阴影干净不过黑，动态范围更宽，HDR，保留老照片的原始氛围与时代质感。
+
+
+04
+实用技巧
+图片
+
+技巧1：描述尽可能详细
+不要仅仅罗列名词，如只写"一只猫"，而是应该像导演指导摄影师一样描述画面，例如描述为"一只橘色的猫，趴在蓝色沙发上，阳光从窗户照进来，毛发细节清晰"。细节越多，效果越好。
+技巧 2：用【】标注关键元素
+例如"画面中，【东方明珠】被一只【巨猫】占据"。这样 AI 会重点处理这些元素。
+技巧3：公式化模板
+产品图模板：
+
+
+[产品] + [材质] + [背景] + [光线] + [品牌元素] + [风格]
+
+
+例：perfume bottle + amber crystal + marble + side lighting + "ESSENCE" + 8K commercial
+人像模板：
+
+
+[人物特征] + [服装] + [姿势] + [环境] + [光线] + [风格]
+
+
+例：Asian woman 20s + beige sweater + reading + café + afternoon light + lifestyle
+技巧4： 指定风格和画质
+在提示词末尾加上"4K 画质"、"电影级光影"等描述，能让出图更符合预期。
+技巧5：分步指令 或者 多轮编辑
+复杂场景拆成几步：
+第一步：创建黄昏森林背景，光线透过橡树，地面薄雾
+第二步：添加爬满藤蔓的古老石坛，有神秘符文
+第三步：石坛上方悬浮发光银色长剑
+第四步：周围添加发光蝴蝶
+也可以通过多轮编辑获得满意的图片（示例提示词如下）：
+
+
+用户：生成咖啡店图片
+
+AI：[图片]
+
+用户：背景改成落地窗，外面雨天
+
+AI：[修改后]
+
+用户：暖色调改成冷色调
+
+AI：[再次修改]
+
+用户：加只猫坐吧台
+
+AI：[最终图片]
+
+技巧6：参考图增强
+在Gemini App等AI生图平台中上传参考图
+输入："Generate in the same style as this reference, but with [你的修改]"
+
+05
+写在最后（含体验入口）
+图片
+
+Nano Banana 2 的发布，让 AI 生图在速度、成本和可用性之间找到了一个不错的平衡点。
+对于需要大量出图的内容创作者、设计师、自媒体人来说，这是一个值得尝试的工具。它不会完全取代专业设计师，但可以作为效率工具，帮助快速完成一些重复性工作。
+如果你还没试过，可以把上面 20 个提示词拿去测试一下，看看效果如何。
+官方渠道（推荐）：
+Gemini App/网页版
+网址：https://gemini.google.com
+直接用Google账号登录，选择"创建图片"功能
+免费用户每天有限额，付费用户无限用
+Google AI Studio
+网址：https://aistudio.google.com
+开发者友好，可以调参数
+有免费额度
+
+
+
+# ============================================================
+# 第三部分：Cursor 执行步骤 (Execution SOP)
+# ============================================================
+Execution_Steps:
+  1. 【创建目录】：如果 [Export_Directory] 下的文件夹不存在，请先创建。
+  2. 【命名决策】：结合 Title 和 Keywords，为 [Media_Assets] 生成 SEO 友好的新文件名。
+  3. 【媒体导出】：
+     - **动作**：将 [Original_Path] 的文件复制(cp)到 [Export_Directory.Media]。
+     - **重命名**：在复制过程中，使用新生成的 SEO 文件名。
+  4. 【撰写博文】：
+     - 撰写高质量MD 文件。
+     - **关键点**：文章内引用的图片/视频地址必须为：[Online_Media_Prefix] + [新文件名]。
+     - **Frontmatter**：包含 title, description, tags, pubDate, heroImage (线上地址)。**不生成 slug 字段**（导出文件名仍为 `[Slug].md`，但 MD 正文的 frontmatter 内不写入 slug）。**格式要求**：frontmatter 必须以单独一行的 `---` 开始，并以单独一行的 `---` 结束（第二个 `---` 后换行再写正文），确保 YAML 闭合，避免文章无法加载。
+     - **超链接**：文章中要有明显按钮，按钮文案：“立刻使用NanoBanana”，按钮链接到:https://app.nanobananao.com/generate/image-tools/nano
+
+  5. 【MD 导出】：
+     - 将生成的 MD 文件存入 [Export_Directory.Markdown]，文件名为 `[Slug].md`。
+     - **命名规则**：Slug 须与文章主题（Title）一致，从标题提炼出简洁、SEO 友好的英文标识作为文件名，便于识别与检索（勿用与主题无关的通用名）。

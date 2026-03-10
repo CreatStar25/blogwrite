@@ -1,102 +1,179 @@
 
-申请发票
+# ============================================================
+# 第一部分：全局导出与 SEO 配置
+# ============================================================
+Project_Config:
+  Name: "nanobananaprohk"
+  Base_Language: "zh-cn"
+  # 媒体引用的线上 CDN 前缀 (博文中将直接使用此地址)
+  Online_Media_Prefix: "https://img.nanobananapro.hk/aiweb/" 
 
-年终奖发放
-报销
+# 指定生成后的文件存放位置 (非项目目录，用于后续脚本处理)
+Export_Directory:
+  Markdown: "/Documents/Github/blogwrite/0_md_out/nanobananaprohk"   # 存放生成的中文母本 .md
+  Media: "/Documents/Github/blogwrite/1_media_out"  # 存放重命名后的本地图片/视频
 
-打款主体问询，算算，许昌
+# ============================================================
+# 第二部分：当前文章详细需求 (Current Task)
+# ============================================================
+Article_Info:
+  Title: "nanobanana2完整操作步骤拆解"
+  Keywords: ["nanobanana2 操作步骤", "nanobanana pro"]
+  Description: "auto" # 请你根据写作的内容，拟一个seo友好的描述。
+  Slug: "auto" # 根据标题/文章主题拟订，作为导出的 .md 文件名，须与主题一致（如 nanobananapro-ai-generator-guide）。
+  Tags: ["auto", "auto"]
+  pubDate:"auto" 
+  lang: "zh-cn" #请使用此处的语种来写md文件；该字段需要写到md文件
 
-其他项目上线，谷歌统计，页面完善，博文
+# 原始素材：请 Cursor 读取此处的本地路径；如果原始图片或者视频文件不存在，就无需改名操作，无需引用。如果文件存在，就必须在文章适当位置引用。
+Media_Assets:
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/np1.png" # 原始图片位置；该图片既做封面图，也做文章内容插图
+    Type: "Cover"
+    SEO_Name: "auto" # 自动生成如: keywords-cover.png
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/np2.png"
+    Type: "In-Article"
+    SEO_Name: "auto"
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/np3.mp4" #如存在，则需要在文章合适位置引用该视频文件
+    Type: "Video"
+    SEO_Name: "auto"
 
-openclaw
+References: |
+又变强了！Nano Banana 2究极强大玩法～【免费渠道合集】
+雷猴啊！朋友们！
+谷歌又发布了他们有史以来最强的图片模型Nano Banana 2！
 
-limax支付
+图片
+不仅是Nano Banana Pro一半的价格，速度还更快，官方说还提升了这么些能力 👇
 
-国内支付宝切走
-mj站点扫码，切换为海外支付
+图片
+官方的showcase，看着十分惊艳~
+
+图片
+但也有很多人说非常失望，还不如Banana Pro？
+
+图片
+于是我拿几十组同样的提示词，详细对比实测Pro和2的差距，
+
+👉所有提示词和免费使用渠道都打包在文档里了，文章底部见啦~
+
+来吧，我们先快速过一遍Nano Banana 2的更新点和玩法！
+
+图片
+图片
+多尺寸输出
+首先是多尺寸输出，这是 Banana Pro 完全做不到的，比如让Banana 2把平面海报拓展成 8：1 超长比例，
+
+图片
+
+参考图
+
+图片
+
+8:1
+
+还有电商横幅图，效果很不错~
+
+图片
+8:1
+
+以及透明胶、书签、纸巾的无缝图案，
+
+图片
+图片
+8:1
+
+整体可以扩展的玩法很多，设计师用起来顺手~
+
+图片
+ 文字渲染
+然后是文字渲染能力，模仿字迹对比。
+
+图片
+参考图
+
+图片
+Nano Banana 2 明显更胜一筹，字体很不错，内容也更完整通顺。
+
+图片
+ 本地化翻译
+本地化翻译能力上，我也测试了当时 Nano Banana Pro 测过的甄嬛传关系图。
+
+图片
+Nano Banana Pro
+
+图片
+Nano Banana 2
+
+2 的提升非常大，性别都对了，文字也没有错误，关系准确性也有所提高。
+
+图片
+ 人物一致性
+其次，我比较关心的是一致性有没有再次提高，
+
+所以我直接给它10张参考图，让我和这些人一起复刻《最后的晚餐》，
+
+图片
+参考图
+
+图片
+Nano Banana Pro
+
+图片
+Nano Banana 2
+
+人物和背景的融合，还有人物之间的姿态形态，2 都比 Pro 更自然。（但秋芝人脸都不够好...）
+
+图片
+图片
+ 指令遵循
+基础的指令遵循Pro和2都做得不错，所以我加了点物理难度，让它生成一个微观水蜜桃，上面有一颗水滴，水滴里倒映着一座倒置的城市。
+
+图片
+Nano Banana Pro
+
+图片
+Nano Banana 2
+
+ 2的指令遵循有进步，城市倒影是准确的，并且光影、绒毛、光晕都更细致。
+
+图片
+ 美学和质感
+最后是美学和质感，比如给白膜上色。
+
+图片
+参考图
+
+图片
+Nano Banana Pro
+
+图片
+Nano Banana 2
+
+这个难分伯仲，整体感觉是 2 的细节更丰富，Pro 的主体质感更真实。
+
+图片
+好啦，以上这六个维度，其实只是算是开胃菜~
+
+图片
+更详细、更多维度的实测对比都在顶部视频里！
 
 
 
-今天可以把
-seedance2.hk
-nanobananapro.hk
-nanobanana2.xin
+# ============================================================
+# 第三部分：Cursor 执行步骤 (Execution SOP)
+# ============================================================
+Execution_Steps:
+  1. 【创建目录】：如果 [Export_Directory] 下的文件夹不存在，请先创建。
+  2. 【命名决策】：结合 Title 和 Keywords，为 [Media_Assets] 生成 SEO 友好的新文件名。
+  3. 【媒体导出】：
+     - **动作**：将 [Original_Path] 的文件复制(cp)到 [Export_Directory.Media]。
+     - **重命名**：在复制过程中，使用新生成的 SEO 文件名。
+  4. 【撰写博文】：
+     - 撰写高质量MD 文件。
+     - **关键点**：文章内引用的图片/视频地址必须为：[Online_Media_Prefix] + [新文件名]。
+     - **Frontmatter**：包含 title, description, tags, pubDate, heroImage (线上地址)。**不生成 slug 字段**（导出文件名仍为 `[Slug].md`，但 MD 正文的 frontmatter 内不写入 slug）。**格式要求**：frontmatter 必须以单独一行的 `---` 开始，并以单独一行的 `---` 结束（第二个 `---` 后换行再写正文），确保 YAML 闭合，避免文章无法加载。
+     - **超链接**：文章中要有明显按钮，按钮文案：“立刻使用NanoBananaPro”，按钮链接到:https://app.nanobananapro.hk/generate/image-tools/nano
 
-三个上线了
-
-
-
-https://www.notebooklm.vip
-
-
-
-
-https://img.openclawd.hk/aiweb/openlaw5.png
-https://img.openclawd.hk/aiweb/openlaw6.png
-https://img.openclawd.hk/aiweb/openlaw7.png
-
-----
-
-
-任务：高精度复刻【竞品网站URL：https://nanobanana2.org/】的核心页面模块，用于我的项目开发。
-核心要求：
-1. 复刻范围与细节：
-   - 导航栏：1:1还原布局（包括logo位置、菜单层级、下拉列表样式），实现hover变色、移动端折叠菜单（汉堡按钮）交互；
-   - 主页模块：还原banner轮播效果、产品卡片的hover动效、核心数据展示模块的样式；
-   - 底部栏：还原布局+点击跳转逻辑（链接用#占位），保留原网站的版权信息格式（替换为我的项目名称）；
-   - 博客板块：复刻列表页的分页功能、筛选功能、博客卡片样式，以及详情页的排版（标题/正文/评论区结构）。
-2. 技术规范：
-   - 框架：Astro + Tailwind CSS；
-   - 样式：严格匹配原网站的颜色值（RGB/十六进制）、字体（如Inter/微软雅黑）、间距（px/rem统一）；
-   - 性能：避免冗余代码，导航栏/底部栏封装为可复用组件，博客列表支持虚拟列表（若数据量大）；
-   - 兼容性：适配Chrome/Firefox/Safari主流浏览器，兼容移动端375px-1920px宽度。
-3. 输出格式：
-   - 每个组件附带注释说明核心逻辑，提供组件使用示例（如如何引入、传参）；
-   - 给出完整的package.json依赖清单，以及启动/运行说明。
-
-
-Role: 你是一个资深的 Astro 框架前端专家和 UI/UX 设计师。
-Task: 请帮我初始化当前 Astro 项目，并配置极其健壮的多语言 (i18n) 路由系统。
-
-技术栈：
-- Astro
-- Tailwind CSS (用于样式)
-- React (如果需要复杂的交互组件可以引入，否则优先使用纯 Astro 组件)
-
-需求细节：
-1. 语言支持：需要支持 24 种语言。
-语言列表及其代码：English (en, 默认语言), 简体中文 (zh-cn), 繁体中文 (zh-tw), 西班牙语 (es), 阿拉伯语 (ar), 葡萄牙语 (pt), 印度尼西亚语 (id), 马来语 (ms), 法语 (fr), 俄语 (ru), 印地语 (hi), 日语 (ja), 德语 (de), 韩语 (ko), 土耳其语 (tr), 越南语 (vi), 泰语 (th), 意大利语 (it), 波斯语 (fa), 荷兰语 (nl), 波兰语 (pl), 瑞典语 (sv), 乌克兰语 (uk), 罗马尼亚语 (ro)。
-2. 路由策略：
-- 默认语言 (en) 放在根目录，例如 `/` 或 `/about`。
-- 其他语言使用子目录，例如 `/zh-cn/`, `/zh-cn/about`。
-3. 结构要求：
-- 请使用 Astro 内置的 i18n 路由功能。
-- 创建一个集中的语言配置文件 (例如 `src/i18n/ui.ts` 或 `consts.ts`) 来管理基础的 UI 翻译词条。
-- 实现一个全局的语言切换器组件 (LanguagePicker)。
-
-请先完成项目的依赖安装、配置文件 (astro.config.mjs) 更新以及基础的目录结构搭建。完成后告诉我。
-
-
-Task: 在现有的 Astro 项目中，添加支持 24 种语言的 Markdown 博客系统。
-
-参考设计：https://seadanceai.com/blog
-
-具体开发要求：
-1. Content Collections 配置：
-- 在 `src/content/config.ts` 中定义 `blog` 的 Schema（包含 title, description, pubDate, coverImage, tags, lang 等字段）。
-2. 目录结构：
-- 在 `src/content/blog/` 下根据 24 种语言创建子文件夹（例如 `src/content/blog/en/`, `src/content/blog/zh-cn/` 等）。
-3. 博客路由：
-- 博客列表页：例如 `/blog/` (默认英文), `/zh-cn/blog/`。请展示该语言下的所有博客文章卡片。卡片设计请参考上面提供的竞品链接。
-- 博客文章详情页：实现动态路由生成 (getStaticPaths)，路径类似于 `/blog/[slug]` 或 `/zh-cn/blog/[slug]`。
-4. Markdown 渲染：
-- 确保 Markdown 内容使用 Tailwind Typography 插件 (`@tailwindcss/typography`) 进行美化排版 (prose 样式)。
-
-请帮我配置好 Collection，并生成博客列表页和详情页的模板代码，最后提供一个 Markdown 文件的 Demo。
-
-
-
-确认所有非英语语言，都已经在 src/i18n/ui.ts 里为对应语言补全完整的首页内容各功能卡片本地内容。
-请你修复后检测各语种，确保各语种本地内容都已经完成。
-
-
+  5. 【MD 导出】：
+     - 将生成的 MD 文件存入 [Export_Directory.Markdown]，文件名为 `[Slug].md`。
+     - **命名规则**：Slug 须与文章主题（Title）一致，从标题提炼出简洁、SEO 友好的英文标识作为文件名，便于识别与检索（勿用与主题无关的通用名）。

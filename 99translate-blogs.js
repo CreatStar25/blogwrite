@@ -57,7 +57,7 @@ const TASKS_OVERRIDE = [];
 
 // ====================================================================
 
-const BATCH_SIZE = 5;
+const BATCH_SIZE = 6;
 const RETRY_MAX = 3;
 const REQUEST_TIMEOUT = 180000;
 
@@ -101,15 +101,28 @@ function getLangFromFrontmatter(content) {
 }
 
 /**
+ * 判断一行是否为 YAML 键值行或空行（属于 frontmatter 内容）
+ */
+function isYamlLikeLine(line) {
+    const t = line.trim();
+    if (t === '') return true;
+    return /^[\w-]+\s*:/.test(t);
+}
+
+/**
  * 验证并修复 MD 的 frontmatter 格式，使其符合 Astro 规范：
- * - 必须以单独一行的 `---` 开始
- * - 必须以单独一行的 `---` 结束，且第二个 `---` 后换行再写正文
+ * 1. 必须以单独一行的 `---` 开始，并以单独一行的 `---` 结束（第二个 `---` 后换行再写正文）
+ * 2. 若传入 langCode，确保 frontmatter 中存在正确的 lang 字段，缺失则补全
+ * 3. 无闭合 --- 时按行推断 YAML 结束位置并补上闭合符
+ * @param {string} content - 原始 MD 内容
+ * @param {{ langCode?: string }} [options] - 可选，langCode 为当前目标语种，用于补全/校验 lang
  * @returns {{ content: string, fixed: boolean }}
  */
-function validateAndFixFrontmatter(content) {
+function validateAndFixFrontmatter(content, options = {}) {
     const lineEnding = content.includes('\r\n') ? '\r\n' : '\n';
     let fixed = false;
     let out = content;
+    const { langCode } = options;
 
     // 1. 确保开头是单独的 ---（无前导空白）
     if (!out.startsWith('---')) {
@@ -123,22 +136,58 @@ function validateAndFixFrontmatter(content) {
         fixed = true;
     }
 
-    // 2. 定位 closing ---（行首的 ---，即 \n--- 或 \r\n---）
     const openMatch = out.match(/^---\r?\n/);
     if (!openMatch) return { content: out, fixed };
     const openLen = openMatch[0].length;
     const afterOpen = out.slice(openLen);
-    const closeMatch = afterOpen.match(/\r?\n---\s*(\r?\n)?/);
-    if (!closeMatch) return { content: out, fixed };
 
-    const endOfDelim = closeMatch.index + closeMatch[0].length;
-    let body = afterOpen.slice(endOfDelim);
-    // 3. 第二个 --- 后必须有换行再接正文
-    if (body.length > 0 && body[0] !== '\n' && body[0] !== '\r') {
-        body = lineEnding + body;
-        out = out.slice(0, openLen) + afterOpen.slice(0, endOfDelim) + body;
+    let frontmatterBody;
+    let body;
+
+    const closeMatch = afterOpen.match(/\r?\n---\s*(\r?\n)?/);
+    if (closeMatch) {
+        const endOfDelim = closeMatch.index + closeMatch[0].length;
+        frontmatterBody = afterOpen.slice(0, closeMatch.index);
+        body = afterOpen.slice(endOfDelim);
+    } else {
+        // 2b. 无闭合 ---：按行推断 YAML 结束位置，补上闭合符（修复不闭合导致 Astro 无法展示）
+        const lines = afterOpen.split(/\r?\n/);
+        let i = 0;
+        while (i < lines.length && isYamlLikeLine(lines[i])) i++;
+        frontmatterBody = lines.slice(0, i).join(lineEnding);
+        body = lines.slice(i).join(lineEnding);
         fixed = true;
     }
+
+    // 3. 校验并补全 lang（Astro 依赖 lang 解析展示，缺失会导致无法正常展示）
+    if (langCode) {
+        const langLineRegex = /^lang:\s*["']?[\w-]+["']?\s*(\r?\n)?/m;
+        const hasLang = langLineRegex.test(frontmatterBody);
+        if (!hasLang) {
+            const langLine = `lang: "${langCode}"${lineEnding}`;
+            frontmatterBody = frontmatterBody.trimEnd() + lineEnding + langLine;
+            fixed = true;
+        } else {
+            const normalized = frontmatterBody.replace(
+                langLineRegex,
+                `lang: "${langCode}"${lineEnding}`
+            );
+            if (normalized !== frontmatterBody) {
+                frontmatterBody = normalized;
+                fixed = true;
+            }
+        }
+    }
+
+    // 4. 第二个 --- 后必须有换行再接正文，确保 YAML 闭合
+    if (body.length > 0 && body[0] !== '\n' && body[0] !== '\r') {
+        body = lineEnding + body;
+        fixed = true;
+    }
+
+    // 5. 严格输出：--- \n frontmatterBody \n --- \n body（避免多余空白导致解析失败）
+    const yamlBlock = frontmatterBody.trimEnd();
+    out = '---' + lineEnding + yamlBlock + lineEnding + '---' + (body.length > 0 ? lineEnding : '') + body;
 
     return { content: out, fixed };
 }
@@ -315,10 +364,10 @@ async function processSingleFile(fullSourcePath, fullTargetPath, langCode, targe
             // 翻译后的 md 删除 slug 行（仅改写入内容，源文件不改）
             finalContent = finalContent.replace(/^\s*slug:\s*[^\n]+\n/gm, '');
 
-            // 验证并修复 frontmatter 格式（Astro：--- 单独成行、闭合后换行再写正文）
-            const { content: validatedContent, fixed } = validateAndFixFrontmatter(finalContent);
+            // 验证并修复 frontmatter（Astro：--- 单独成行并闭合、lang 不缺失、第二个 --- 后换行再写正文）
+            const { content: validatedContent, fixed } = validateAndFixFrontmatter(finalContent, { langCode });
             finalContent = validatedContent;
-            if (fixed) console.log(`🔧 [${langCode}] 已修复 frontmatter 格式`);
+            if (fixed) console.log(`🔧 [${langCode}] 已修复 frontmatter（lang/闭合/换行）`);
 
             fs.writeFileSync(fullTargetPath, finalContent, 'utf-8');
             console.log(`✅ [${langCode}] 保存成功`);

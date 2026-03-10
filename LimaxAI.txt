@@ -1,102 +1,184 @@
 
-申请发票
+# ============================================================
+# 第一部分：全局导出与 SEO 配置
+# ============================================================
+Project_Config:
+  Name: "LimaxAI"
+  Base_Language: "zh-cn"
+  # 媒体引用的线上 CDN 前缀 (博文中将直接使用此地址)
+  Online_Media_Prefix: "https://img.limaxai.com/aiweb/" 
 
-年终奖发放
-报销
+# 指定生成后的文件存放位置 (非项目目录，用于后续脚本处理)
+Export_Directory:
+  Markdown: "/Documents/Github/blogwrite/0_md_out/LimaxAI"   # 存放生成的中文母本 .md
+  Media: "/Documents/Github/blogwrite/1_media_out"  # 存放重命名后的本地图片/视频
 
-打款主体问询，算算，许昌
+# ============================================================
+# 第二部分：当前文章详细需求 (Current Task)
+# ============================================================
+Article_Info:
+  Title: "Midjourney这些高级提示词收藏起来慢慢用~~"
+  Keywords: ["Midjourney 提示词", "Limax AI"]
+  Description: "auto" # 请你根据写作的内容，拟一个seo友好的描述。
+  Slug: "auto" # 根据标题/文章主题拟订，作为导出的 .md 文件名，须与主题一致（如 limax-ai-generator-guide）。
+  Tags: ["auto", "auto"]
+  pubDate:"auto" 
+  lang: "zh-cn" #请使用此处的语种来写md文件；该字段需要写到md文件
 
-其他项目上线，谷歌统计，页面完善，博文
+# 原始素材：请 Cursor 读取此处的本地路径；如果原始图片或者视频文件不存在，就无需改名操作，无需引用。如果文件存在，就必须在文章适当位置引用。
+Media_Assets:
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/lm1.png" # 原始图片位置；该图片既做封面图，也做文章内容插图
+    Type: "Cover"
+    SEO_Name: "auto" # 自动生成如: keywords-cover.png
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/lm2.png"
+    Type: "In-Article"
+    SEO_Name: "auto"
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/lm3.png"
+    Type: "In-Article"
+    SEO_Name: "auto"
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/lm3.png"
+    Type: "In-Article"
+    SEO_Name: "auto"
+  - Original_Path: "/Documents/Github/blogwrite/1_media_in/nt3.mp4" #如存在，则需要在文章合适位置引用该视频文件
+    Type: "Video"
+    SEO_Name: "auto"
 
-openclaw
+References: |
 
-limax支付
+美学天花板！Midjourney这些高级提示词收藏起来慢慢用~~
+近年来，AI生图技术发展迅猛！国内外各大厂商，你追我赶，无论是大模型，还是产品，都“卷”出天际~~
 
-国内支付宝切走
-mj站点扫码，切换为海外支付
+中国的AI力量也不甘示弱，其中以即梦、豆包、可画为代表，凭借其想大的研发实力，冲出突围，进步巨大，取得了补错的成绩与口碑。
 
+因此，也有些小伙伴在怀疑Midjourney是不是不行了？
 
+在这里可以负责的说，你可以永远相信Midjourney！
 
-今天可以把
-seedance2.hk
-nanobananapro.hk
-nanobanana2.xin
+Image
+近日在X上，刚好看到博主@Bri Guy AI发了一组一共30挑Midjourney的提示词，囊括了各种人像摄影的各种风格，非常有参考性，简直就是美学巅峰！
 
-三个上线了
+Image
 
-
-
-https://www.notebooklm.vip
-
-
-
-
-https://img.openclawd.hk/aiweb/openlaw5.png
-https://img.openclawd.hk/aiweb/openlaw6.png
-https://img.openclawd.hk/aiweb/openlaw7.png
-
-----
-
-
-任务：高精度复刻【竞品网站URL：https://nanobanana2.org/】的核心页面模块，用于我的项目开发。
-核心要求：
-1. 复刻范围与细节：
-   - 导航栏：1:1还原布局（包括logo位置、菜单层级、下拉列表样式），实现hover变色、移动端折叠菜单（汉堡按钮）交互；
-   - 主页模块：还原banner轮播效果、产品卡片的hover动效、核心数据展示模块的样式；
-   - 底部栏：还原布局+点击跳转逻辑（链接用#占位），保留原网站的版权信息格式（替换为我的项目名称）；
-   - 博客板块：复刻列表页的分页功能、筛选功能、博客卡片样式，以及详情页的排版（标题/正文/评论区结构）。
-2. 技术规范：
-   - 框架：Astro + Tailwind CSS；
-   - 样式：严格匹配原网站的颜色值（RGB/十六进制）、字体（如Inter/微软雅黑）、间距（px/rem统一）；
-   - 性能：避免冗余代码，导航栏/底部栏封装为可复用组件，博客列表支持虚拟列表（若数据量大）；
-   - 兼容性：适配Chrome/Firefox/Safari主流浏览器，兼容移动端375px-1920px宽度。
-3. 输出格式：
-   - 每个组件附带注释说明核心逻辑，提供组件使用示例（如如何引入、传参）；
-   - 给出完整的package.json依赖清单，以及启动/运行说明。
-
-
-Role: 你是一个资深的 Astro 框架前端专家和 UI/UX 设计师。
-Task: 请帮我初始化当前 Astro 项目，并配置极其健壮的多语言 (i18n) 路由系统。
-
-技术栈：
-- Astro
-- Tailwind CSS (用于样式)
-- React (如果需要复杂的交互组件可以引入，否则优先使用纯 Astro 组件)
-
-需求细节：
-1. 语言支持：需要支持 24 种语言。
-语言列表及其代码：English (en, 默认语言), 简体中文 (zh-cn), 繁体中文 (zh-tw), 西班牙语 (es), 阿拉伯语 (ar), 葡萄牙语 (pt), 印度尼西亚语 (id), 马来语 (ms), 法语 (fr), 俄语 (ru), 印地语 (hi), 日语 (ja), 德语 (de), 韩语 (ko), 土耳其语 (tr), 越南语 (vi), 泰语 (th), 意大利语 (it), 波斯语 (fa), 荷兰语 (nl), 波兰语 (pl), 瑞典语 (sv), 乌克兰语 (uk), 罗马尼亚语 (ro)。
-2. 路由策略：
-- 默认语言 (en) 放在根目录，例如 `/` 或 `/about`。
-- 其他语言使用子目录，例如 `/zh-cn/`, `/zh-cn/about`。
-3. 结构要求：
-- 请使用 Astro 内置的 i18n 路由功能。
-- 创建一个集中的语言配置文件 (例如 `src/i18n/ui.ts` 或 `consts.ts`) 来管理基础的 UI 翻译词条。
-- 实现一个全局的语言切换器组件 (LanguagePicker)。
-
-请先完成项目的依赖安装、配置文件 (astro.config.mjs) 更新以及基础的目录结构搭建。完成后告诉我。
-
-
-Task: 在现有的 Astro 项目中，添加支持 24 种语言的 Markdown 博客系统。
-
-参考设计：https://seadanceai.com/blog
-
-具体开发要求：
-1. Content Collections 配置：
-- 在 `src/content/config.ts` 中定义 `blog` 的 Schema（包含 title, description, pubDate, coverImage, tags, lang 等字段）。
-2. 目录结构：
-- 在 `src/content/blog/` 下根据 24 种语言创建子文件夹（例如 `src/content/blog/en/`, `src/content/blog/zh-cn/` 等）。
-3. 博客路由：
-- 博客列表页：例如 `/blog/` (默认英文), `/zh-cn/blog/`。请展示该语言下的所有博客文章卡片。卡片设计请参考上面提供的竞品链接。
-- 博客文章详情页：实现动态路由生成 (getStaticPaths)，路径类似于 `/blog/[slug]` 或 `/zh-cn/blog/[slug]`。
-4. Markdown 渲染：
-- 确保 Markdown 内容使用 Tailwind Typography 插件 (`@tailwindcss/typography`) 进行美化排版 (prose 样式)。
-
-请帮我配置好 Collection，并生成博客列表页和详情页的模板代码，最后提供一个 Markdown 文件的 Demo。
+感兴趣的小伙伴可以收藏，慢慢使用~~
 
 
 
-确认所有非英语语言，都已经在 src/i18n/ui.ts 里为对应语言补全完整的首页内容各功能卡片本地内容。
-请你修复后检测各语种，确保各语种本地内容都已经完成。
+【01】Close-up of models in colorful bows and ribbons, with a retro, 80s-inspired, kitsch style of photography and pop art. --ar 31:64 --profile i17co6d --stylize 500
+
+Image
+【02】Black and white photograph of a beautiful woman in a long coat standing next to a man, both looking at the camera with a serious expression, in a 1950s style, in the style of Peter Lindbergh, with soft lighting. --ar 85:128 --profile i17co6d --stylize 500
+
+Image
+【03】A photograph of an attractive woman in black leather pants, being held up by people at the top of a dance floor with her arms outstretched above their heads. The scene is illuminated by blue lighting, and the shot is taken from a low angle using a Canon EOS R6 camera. --ar 64:51 --profile i17co6d --stylize 500
+
+Image
+【04】A woman sitting on the stairs, wearing a black dress and high heels, in a dimly lit environment with shadows, in a photorealistic style. --ar 85:128 --profile i17co6d --stylize 500
+
+Image
+【05】A photograph of an eccentric woman with white hair wearing a large red bow on her head, a wrapped golden gift box near her feet, posing in front of a Christmas tree. She is wearing a plastic dress and a large bow. The photograph is shot from a low angle, with a Kodak Gold 200 film style. --ar 3:4 --profile i17co6d --stylize 500
+
+Image
+【06】A woman with short brown hair holds an abstract red triangle in front of her face, which is covered by black paper and has no mouth or nose. The background features a gray sky and the sea, captured from behind. This minimalistic photograph uses soft lighting to highlight only one part of the body, creating a mysterious atmosphere. --ar 1:1 --profile i17co6d --stylize 500
+
+Image
+【07】Close-up of two models in the style of retro, kitsch, bold colorism, advertising-inspired, Valentine's Day theme, wrapped in ribbons and bows, in the style of David LaChapelle and Rineke Dijkstra. --ar 31:64 --profile i17co6d --stylize 500
+
+Image
+【08】A portrait of an androgynous blonde woman with red lipstick wearing an origami white paper mask over her eyes. The origami creates the shape of minimalistic geometric surrealism on a black background. This is a hyperreal photograph in the style of Plaster, using Kodak film Kodachrome, with a hyper-realistic, fashion editorial style and soft light with hard shadows. --ar 85:128 --profile i17co6d --stylize 500
+
+Image
+【09】A fashion photograph of a blonde woman with pigtails wearing an oversized pink futuristic jumpsuit. She is leaning forward and looking down at the ground. The sky behind her has a bright blue color. The image is shot from below, on film, in pastel colors, in the style of Wes Anderson, as editorial photography. It was shot using a Kodak Portra 400T film, on a Leica M3 camera with an 85mm f/2 lens, resulting in a hyper-realistic appearance. --ar 37:64 --profile i17co6d --stylize 500
+
+Image
+【10】A fashion photo of a beautiful Black woman with white hair, wearing an avant-garde gown made from large, billowing layers of silk and leather, standing on the beach with ocean waves in the background. --ar 85:128 --profile i17co6d --stylize 500
+
+Image
+【11】Beautiful woman hanging upside down in white fabric, against a dark background, shot on film. --ar 97:128 --profile i17co6d --stylize 500
+
+Image
+【12】Minimalist double exposure effect photography of two beautiful women with pink hair. One is looking to the left, and the other looks from behind her head in profile, with a yellow neon light on a white background. --ar 1:1 --profile i17co6d --stylize 500
+
+Image
+【13】Surpassing oneself, the surrealism of missing posters, weird horror, ruined materials, vertical stacking iridescence portraits in tunnels layered abstract landscapes --ar 2:3 --profile i17co6d --stylize 600
+
+Image
+【14】Close-up portrait of a woman with an open mouth, wearing a white turban on her head and flowers in her hair. She is adorned with earrings and a necklace, and her skin appears wet with freckles. Her lips are shiny, abstract photography with a fantasy art pose. --ar 3:4 --profile 2auet8e
+
+Image
+【15】Brunette Female, pink and blue neon and black color block beach outfit, spring break crowd scene, 1990s --ar 4:5 --raw --profile i17co6d --stylize 500
+
+Image
+【16】A photograph of an attractive woman with one half of her face black with the glimmer of the universe from an incredible distance and the other half white, wearing glitter makeup, pearl earrings, against a red background, with dramatic lighting --ar 3:4 --exp 7 --profile i17co6d --stylize 500
+
+Image
+【17】black and white photograph of an attractive blonde woman with big eyes, wearing long eyelashes, wearing heavy makeup on her face, looking up at the viewer in horror, x-ray quality to half the portrait showing facial bone structure, split screen, thermal printing effect --ar 47:64 --v 6
+
+Image
+【18】A beautiful woman with freckles and black makeup, wearing an elegant headpiece made of transparent fabric and lace that covers her eyes, has tears running down from under the eye line on one side of her face, and is holding up some chains to cover half of it. Her long hair is flowing around her neck, adding depth to the scene. The soft lighting casts shadows across her skin, creating a dramatic effect. Shot in the style of photographer David LaChapelle.
+
+Image
+【19】A portrait of an extremely beautiful woman with a medium-length bob hairstyle, wearing a black sequined dress and holding pink flowers in her hands. She has red lipstick and blue eyes, illuminated by the soft glow from a nearby window in a dark room. The image has a 35mm film photography aesthetic with a film grain effect. --ar 85:128 --profile i17co6d --stylize 500
+
+Image
+【20】Close-up of a woman with her face painted in orange and blue stripes, in the style of 1980s photography, with a Vogue magazine aesthetic. --ar 85:128 --profile i17co6d --stylize 500
+
+Image
+【21】Editorial fashion shot, low-angle full-body shot of a blonde woman wearing wide-leg pants with a tie-dye print made from pink and blue silk in pastel tones, a white shirt, a belt, and high boots, posing against the sky at sunset in cloudy weather with soft light, a soft glow, and soft focus, in a minimalistic, ethereal, minimalist style. --ar 37:64 --profile i17co6d --stylize 500
+
+Image
+【22】35mm film photograph of an exotic woman with curly hair wearing a yellow halter top, posing for a photo shoot, with cinematic lighting, a blue and green color scheme, and a dark background. The photograph was shot on a Leica M6 in the style of [Artist]. --ar 97:128 --profile kgj6hz6 --stylize 500
+
+Image
+【23】A woman wearing an elaborate mask made of white and silver crystals, shot on a Leica M6 high-resolution photograph, with a hyper-realistic, cinematic color grading. --ar 3:4 --profile kgj6hz6 --stylize 500
+
+Image
+【24】A portrait of an elderly woman with short, curly hair wearing red, neon-skull-shaped glasses, a dark red sweater, and a minimalistic, softly lit composition against a dark background. The image has a symmetrical composition and an analog film grain with a vintage color grading, in the style of minimalist photography. --ar 3:4 --profile kgj6hz6 --stylize 500
+
+Image
+【25】A woman with her eyes closed, wearing mesh and black fabric that covers her face, wrapped in water droplets, with an attractive snake on top of her head. The wet skin and soft focus photography create a dreamy, exotic portrait in the style of cottagecore. --ar 85:128 --profile kgj6hz6 --stylize 500
+
+Image
+【26】A woman wearing a colorful, shiny, holographic latex top and long yellow gloves. She is also wearing a large, pointy hat, and her face is covered with a red mask. She poses for the camera in front of a blue sky, in a fashion photography editorial style reminiscent of Vogue magazine. This high-resolution photo has a solid, isolated background. --ar 85:128 --profile kgj6hz6 --stylize 500
+
+Image
+【27】woman, full-body shot, wearing a black polka-dot shirt and pants, holding bouquet of dead flowers, facing the camera, posing for a magazine cover, against a blue background, --ar 3:4 --profile i17co6d --stylize 500
+
+Image
+【28】A highly detailed movie still of an attractive woman wearing streetwear and standing in front of the neon lights inside an arcade center. She is wearing a white oversized t-shirt with a colorful graphic print on it, and has dark brown hair. The shot is cinematic in the style of David Fincher. --ar 85:128 --profile nft82ak --stylize 500
+
+Image
+【29】thrill seeker, multiracial female model, cutoff mens oversized suit, exposed waistline, avant-garde body poses, low angle perspective, venndiagramcore, y2k aesthetic, Kodak colorplus, --ar 63:107 --profile kgj6hz6 --stylize 500
+
+Image
+【30】dark surreal fashion photography of a mysterious woman drenched in water, snake resting on her head, black mesh outfit revealing skin underneath, intense gaze with closed eyes, moody shadows and glossy highlights, gothic aesthetic, dramatic studio lighting, soft focus on the background
+
+Image
+从复古到未来，从极简到超现实，这30组提示词不仅是创作工具，更是打开美学世界的钥匙。
+
+Midjourney用实力证明，它仍是AI生图赛道的引领者——收藏这些灵感，
+
+让每一次生成都成为极具艺术的作品！
+
+图片
+图片
 
 
+
+# ============================================================
+# 第三部分：Cursor 执行步骤 (Execution SOP)
+# ============================================================
+Execution_Steps:
+  1. 【创建目录】：如果 [Export_Directory] 下的文件夹不存在，请先创建。
+  2. 【命名决策】：结合 Title 和 Keywords，为 [Media_Assets] 生成 SEO 友好的新文件名。
+  3. 【媒体导出】：
+     - **动作**：将 [Original_Path] 的文件复制(cp)到 [Export_Directory.Media]。
+     - **重命名**：在复制过程中，使用新生成的 SEO 文件名。
+  4. 【撰写博文】：
+     - 撰写高质量MD 文件。
+     - **关键点**：文章内引用的图片/视频地址必须为：[Online_Media_Prefix] + [新文件名]。
+     - **Frontmatter**：包含 title, description, tags, pubDate, heroImage (线上地址)。**不生成 slug 字段**（导出文件名仍为 `[Slug].md`，但 MD 正文的 frontmatter 内不写入 slug）。**格式要求**：frontmatter 必须以单独一行的 `---` 开始，并以单独一行的 `---` 结束（第二个 `---` 后换行再写正文），确保 YAML 闭合，避免文章无法加载。
+     - **超链接**：文章中要有明显按钮，按钮文案：“立刻开始创作”，按钮链接到:https://limaxai.com
+
+  5. 【MD 导出】：
+     - 将生成的 MD 文件存入 [Export_Directory.Markdown]，文件名为 `[Slug].md`。
+     - **命名规则**：Slug 须与文章主题（Title）一致，从标题提炼出简洁、SEO 友好的英文标识作为文件名，便于识别与检索（勿用与主题无关的通用名）。

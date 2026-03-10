@@ -1,19 +1,32 @@
 请挨个读取下列文件，并严格执行文件中的任务。
 处理完毕后再读取下一个文件，执行文件内的任务。
 
+
+@gemini3hk.txt
+@bananavip.txt
+@nanobanana2xin.txt
+@seedance2hk.txt
+
 @deepseek4hk.txt
-@gemini3hk.txt@bananavip.txt@nanobanana2xin.txt@seedance2hk.txt
 @seedance.txt
 @veo3hk.txt
 @sunohk.txt
 
+@nanobanana3top.txt
+@nanobananaocom.txt
+@notebooklmvip.txt
+@openclawdhk.txt
+@nanobananaprohk.txt
+
+@LimaxAI.txt
+@aixzip.txt
 
 具体步骤：
 1、媒体处理：请先为任务中的原始媒体文件构思 SEO 友好的新名称。
 2、执行重命名：在终端直接执行 cp 命令，将原始媒体文件从 Original_Path 复制到 Export_Directory.Media 目录下，并重命名为新名称。
 3、内容创作：基于参考资料撰写高质量的 MD 文章；撰写过程需要结合关键字，创作符合seo规范的文章。
 4、引用替换：确保 MD 文档中的图片/视频引用地址为 Online_Media_Prefix + 新文件名。
-5、导出文件：将 MD 文件以 [Slug].md 命名，存入 Export_Directory.Markdown。
+5、导出文件：将 MD 文件以主题翻译出来的 [Slug].md 命名，存入 Export_Directory.Markdown。
 
 请在执行前打印出新文件改动，然后执行。
 
@@ -27,3 +40,8 @@
 @seedance.txt
 @veo3hk.txt
 @sunohk.txt
+
+@nanobanana3top.txt@nanobananaocom.txt@notebooklmvip.txt@openclawdhk.txt@nanobananaprohk.txt
+
+@LimaxAI.txt
+@aixzip.txt
