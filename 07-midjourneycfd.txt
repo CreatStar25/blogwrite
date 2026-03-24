@@ -1,0 +1,160 @@
+【任务1】
+在项目 @midjourneycfd 的“Midjourneycfd教程”的教程页面，新增以下多篇教程文章。
+
+教程内容主要是：介绍midjourney的使用教程，midjourney使用技巧，功能特性，使用场景等。
+介绍完后，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：开始使用Midjourney
+按钮链接到：https://app.midjourney.cfd/generate/image-tools/mjpro
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：midjourney关键词、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney 提示词精选：艺术风格
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/1ZtnMF9CkK4ahFhL5xvqcA
+
+在文章中合理地方使用以下配图：
+https://img.midjourney.cfd/aiweb/midjourney-11.png
+-----------------------
+
+-------- 文章2 ---------
+文章关键字：midjourney关键词、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney 提示词精选：卡通风格
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/1p3pRiWRPXQB3k7fd9Zw4w
+
+在文章中合理地方使用以下配图：
+https://img.midjourney.cfd/aiweb/midjourney-12.png
+-----------------------
+
+-------- 文章3 ---------
+文章关键字：midjourney关键词、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney 提示词精选：机械昆虫风格
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/Hh4Ld8GFiLhhKFFV2KTptw
+
+在文章中合理地方使用以下配图：
+https://img.midjourney.cfd/aiweb/midjourney-13.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：midjourney关键词、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney 提示词精选：迷幻森林风格
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/Ot4NuBRZ1MI1sVap63ETmA
+
+在文章中合理地方使用以下配图：
+https://img.midjourney.cfd/aiweb/midjourney-14.png
+-----------------------
+
+-------- 文章5 ---------
+文章关键字：midjourney关键词、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney 提示词精选：毛线宠物风格
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/IWoQ0PZ15bR0c3noqV2Xag
+
+在文章中合理地方使用以下配图：
+https://img.midjourney.cfd/aiweb/midjourney-15.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。
+
+----------------------------------------------------------
+
+【任务2】
+在项目 @midjourneycfd 的“博客”列表页面，新增以下多篇博客文章。
+
+博客内容主要是：介绍midjourney的使用教程，midjourney使用技巧，功能特性，使用场景等。
+博客文章的结尾，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：开始使用Midjourney
+按钮链接到：https://app.midjourney.cfd/generate/image-tools/mjpro
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：midjourney V8、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney V8模型震撼上线：生成速度提升5倍，全面兼容V7个性化配置
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/cQJ93RFBgPE2olyujcASyw
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.midjourney.cfd/aiweb/midjourney-blog-6.png
+https://img.midjourney.cfd/aiweb/midjourney-blog-6a.png
+
+-----------------------
+
+
+-------- 文章2 ---------
+文章关键字：midjourney V8、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney V8 发布，模型生成速度提升约5倍
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/e9N5tGpKCW9NYImGGysRgg
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.midjourney.cfd/aiweb/midjourney-blog-7.png
+-----------------------
+
+
+-------- 文章3 ---------
+文章关键字：midjourney V8、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney V8今天终于开放测试了
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/aJz73m_hbfawH4QPyGPD3A
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.midjourney.cfd/aiweb/midjourney-blog-8.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：midjourney V8、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney V8 来了：我第一时间测试了
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/ga8lbq6wP9lMdSEydQ6btw
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.midjourney.cfd/aiweb/midjourney-blog-9.png
+-----------------------
+
+
+-------- 文章5 ---------
+文章关键字：midjourney V8、midjourney提示词、midjourney关键词
+文章标题：
+核心AI艺术工具技术解析——Midjourney与Sora
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/Tw479gQmTy7JG-26Bq9j2w
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.midjourney.cfd/aiweb/midjourney-blog-10.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章md文件后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。

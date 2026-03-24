@@ -1,0 +1,162 @@
+【任务1】
+在项目 @openclawdhk 的“OpenClaw使用指南”的教程页面，新增以下多篇教程文章。
+
+教程内容主要是：介绍openclaw的使用教程，使用技巧，功能特性，使用场景等。
+博客文章的结尾，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：开始使用OpenClaw
+按钮链接到：https://openclawd.hk/download/
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：openclaw使用教程、openclaw安装、openclaw部署、openclaw动态
+文章标题：
+Suno提示词宝典：200+组合帮你生成高质量作品
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/GLRJG1_uCCpauYBfcl97qg
+
+在文章中合理地方使用以下配图：
+https://img.openclawd.hk/aiweb/openclawd-1.png
+-----------------------
+
+
+-------- 文章2 ---------
+文章关键字：openclaw使用教程、openclaw安装、openclaw部署、openclaw动态
+文章标题：
+Suno 使用手册：从入门到进阶(保姆级教程)
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/WuS0tJUacVNxIWzKDoOQ8A
+
+在文章中合理地方使用以下配图：
+https://img.openclawd.hk/aiweb/openclawd-2.png
+-----------------------
+
+
+-------- 文章3 ---------
+文章关键字：openclaw使用教程、openclaw安装、openclaw部署、openclaw动态
+文章标题：
+Suno 创作指南
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/hAfQV_OQR4kAux6kkRC6yg
+
+在文章中合理地方使用以下配图：
+https://img.openclawd.hk/aiweb/openclawd-3.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：openclaw使用教程、openclaw安装、openclaw部署、openclaw动态
+文章标题：
+Suno 调音：六大分类提示词全解析，轻松塑造你的专属音色
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/GFH1n8heCrgp0bvHRIiSVA
+
+在文章中合理地方使用以下配图：
+https://img.openclawd.hk/aiweb/openclawd-4.png
+-----------------------
+
+
+-------- 文章5 ---------
+文章关键字：openclaw使用教程、openclaw安装、openclaw部署、openclaw动态
+文章标题：
+用Suno AI写歌，成为一名AI音乐人（含详细操作步骤）
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/hjMjWqrqtuPsTtMKAgA__A
+
+
+在文章中合理地方使用以下配图：
+https://img.openclawd.hk/aiweb/openclawd-5.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。
+
+----------------------------------------------------------
+
+【任务2】
+在项目 @openclawdhk 的博客列表，新增以下多篇博客文章。
+
+博客内容主要是：介绍openclaw的使用教程，使用技巧，功能特性，使用场景等。
+博客文章的结尾，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：开始使用OpenClaw
+按钮链接到：https://openclawd.hk/download/
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：openclaw使用教程、openclaw安装、openclaw部署、openclaw动态
+文章标题：
+OpenClaw 到底能干嘛？30 个真实落地场景，看完直接用！！
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/4G3jso1vAM4xG9MWurg0VA
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.openclawd.hk/aiweb/openclawd-blog-1.png
+-----------------------
+
+
+-------- 文章2 ---------
+文章关键字：openclaw使用教程、openclaw安装、openclaw部署、openclaw动态
+文章标题：
+OpenClaw是什么？
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/NZTFlQ6URaSOneGoMEPqDQ
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.openclawd.hk/aiweb/openclawd-blog-2.png
+-----------------------
+
+
+-------- 文章3 ---------
+文章关键字：openclaw使用教程、openclaw安装、openclaw部署、openclaw动态
+文章标题：
+全网火爆的OpenClaw（原Clawdbot/Moltbot），保姆级部署教程
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/vtu2GCUeytjQgwm8yyvRwA
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.openclawd.hk/aiweb/openclawd-blog-3.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：openclaw使用教程、openclaw安装、openclaw部署、openclaw动态
+文章标题：
+Open Claw 的前世今生
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/1evadVCZ018F54__i6wJpw
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.openclawd.hk/aiweb/openclawd-blog-4.png
+-----------------------
+
+
+-------- 文章5 ---------
+文章关键字：openclaw使用教程、openclaw安装、openclaw部署、openclaw动态
+文章标题：
+普通人要 小龙虾AI OpenClaw 有什么用？从聊天到执行
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/gBJ4gPZBNHpcuJrgpDvG-g
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.openclawd.hk/aiweb/openclawd-blog-5.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章md文件后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。

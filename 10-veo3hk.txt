@@ -1,0 +1,159 @@
+【任务1】
+在项目 @veo3hk 的“Veo使用教程”的教程页面，新增以下多篇教程文章。
+
+教程内容主要是：介绍veo3的功能特性，使用教程，使用技巧，使用场景等。
+介绍完后，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：开始使用Veo
+按钮链接到：https://app.veo3.hk/generate/video-tools/veo
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：Veo3、veo3提示词、veo使用教程
+文章标题：Veo3 ：
+配合nonabanana 把自己变成像素游戏角色
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/qQJ-sqjPSvMbbz5yCbE-Rw
+
+在文章中合理地方使用以下配图：
+https://img.veo3.hk/aiweb/veo3-1.png
+-----------------------
+
+
+-------- 文章2 ---------
+文章关键字：Veo3、veo3提示词、veo使用教程
+文章标题： 
+Veo3视频模型-Google Flow已更新9:16竖屏
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/9c9pCyA1z0Bd-_yOrm4K_Q
+
+在文章中合理地方使用以下配图：
+https://img.veo3.hk/aiweb/veo3-2.png
+-----------------------
+
+
+-------- 文章3 ---------
+文章关键字：Veo3、veo3提示词、veo使用教程
+文章标题：
+Veo3核心技术:CoF实现零样本视觉推理能力
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/RCDj_uRDm0uwvz97HI9-BA
+
+在文章中合理地方使用以下配图：
+https://img.veo3.hk/aiweb/veo3-3.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：Veo3、veo3提示词、veo使用教程
+文章标题：
+Veo3.1 使用效果记录
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/OyO_KaxWpBI4ECSsRT1ljA
+
+在文章中合理地方使用以下配图：
+https://img.veo3.hk/aiweb/veo3-4.webp
+-----------------------
+
+
+-------- 文章5 ---------
+文章关键字：Veo3、veo3提示词、veo使用教程
+文章标题：谷歌大更新：全面放开免费生成Veo3视频
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/4PAvJ1Mn9XL94Dhu3cB71Q
+
+在文章中合理地方使用以下配图：
+https://img.veo3.hk/aiweb/veo3-5.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。
+
+----------------------------------------------------------
+
+【任务2】
+在项目 @veo3hk 的“博客”的博客页面，新增以下多篇博客文章。
+
+博客内容主要是：介绍veo3的功能特性，使用教程，使用技巧，使用场景等。
+博客文章的结尾，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：开始使用Veo
+按钮链接到：https://app.veo3.hk/generate/video-tools/veo
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：Veo3、veo3提示词、veo使用教程
+文章标题：
+来认识一下Veo3
+
+文章内容：请你参考：
+https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.veo3.hk/aiweb/veo3-blog-1.png
+-----------------------
+
+
+-------- 文章2 ---------
+文章关键字：Veo3、veo3提示词、veo使用教程
+文章标题：
+使用Veo3制作极具创意的图片和视频
+
+文章内容：请你参考：
+https://blog.google/innovation-and-ai/models-and-research/google-labs/video-image-generation-update-december-2024/
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.veo3.hk/aiweb/veo3-blog-2.png
+-----------------------
+
+
+-------- 文章3 ---------
+文章关键字：Veo3、veo3提示词、veo使用教程
+文章标题：
+介绍Veo 3.1的超能力
+
+文章内容：请你参考：
+https://blog.google/innovation-and-ai/products/veo-updates-flow/
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.veo3.hk/aiweb/veo3-blog-3.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：Veo3、veo3提示词、veo使用教程
+文章标题：
+Midjourney提示词——分享4
+
+文章内容：请你参考：
+https://blog.google/innovation-and-ai/products/google-generative-ai-veo-imagen-3/
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.veo3.hk/aiweb/veo3-blog-4.png
+-----------------------
+
+
+-------- 文章5 ---------
+文章关键字：Veo3、veo3提示词、veo使用教程
+文章标题：
+Veo3 ：更可控、更生动、更精细的视频创作
+
+文章内容：请你参考：
+https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.veo3.hk/aiweb/veo3-blog-5.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章md文件后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。

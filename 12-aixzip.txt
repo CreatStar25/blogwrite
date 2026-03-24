@@ -23,7 +23,7 @@ Article_Info:
   Description: "auto" # 请你根据写作的内容，拟一个seo友好的描述。
   Slug: "auto" # 根据标题/文章主题拟订，作为导出的 .md 文件名，须与主题一致（如 nanobanana-ai-generator-guide）。
   Tags: ["auto", "auto"]
-  pubDate:"auto" 
+  pubDate: "today"  # 生成 MD 时使用执行当天的日期（YYYY-MM-DD），确保博客日期显示为当天 
   lang: "zh-cn" #请使用此处的语种来写md文件；该字段需要写到md文件
 
 # 原始素材：请 Cursor 读取此处的本地路径；如果原始图片或者视频文件不存在，就无需改名操作，无需引用。如果文件存在，就必须在文章适当位置引用。
@@ -102,7 +102,7 @@ Execution_Steps:
   4. 【撰写博文】：
      - 撰写高质量MD 文件。
      - **关键点**：文章内引用的图片/视频地址必须为：[Online_Media_Prefix] + [新文件名]。
-     - **Frontmatter**：包含 title, description, tags, pubDate, heroImage (线上地址)。**不生成 slug 字段**（导出文件名仍为 `[Slug].md`，但 MD 正文的 frontmatter 内不写入 slug）。**格式要求**：frontmatter 必须以单独一行的 `---` 开始，并以单独一行的 `---` 结束（第二个 `---` 后换行再写正文），确保 YAML 闭合，避免文章无法加载。
+     - **Frontmatter**：包含 title, description, tags, pubDate, heroImage (线上地址)。**pubDate** 必须为执行当天的日期（格式 YYYY-MM-DD），确保文章日期显示为当天。**不生成 slug 字段**（导出文件名仍为 `[Slug].md`，但 MD 正文的 frontmatter 内不写入 slug）。**格式要求**：frontmatter 必须以单独一行的 `---` 开始，并以单独一行的 `---` 结束（第二个 `---` 后换行再写正文），确保 YAML 闭合，避免文章无法加载。
      - **超链接**：文章中要有明显按钮，按钮文案：“立刻使用Ai Tools”，按钮链接到:https://aixzip.com
   5. 【MD 导出】：
      - 将生成的 MD 文件存入 [Export_Directory.Markdown]，文件名为 `[Slug].md`。

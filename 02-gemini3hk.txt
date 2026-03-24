@@ -1,0 +1,161 @@
+【任务1】
+在项目 @gemini3hk 的“Gemini使用指南”的教程页面，新增以下多篇教程文章。
+
+教程内容：介绍gemini3模型的使用教程，使用技巧，功能特性，使用场景等。
+介绍完后，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：去使用Gemini3
+按钮链接到：https://app.gemini3.hk/chat?model=gemini
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：midjourney关键词、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney提示词——9本玄幻小说封面
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/MhWgsnzthuFslsUtrQau6Q
+
+在文章中合理地方使用以下配图：
+https://img.gemini3.hk/aiweb/midjourney-6.png
+-----------------------
+
+
+-------- 文章2 ---------
+文章关键字：midjourney关键词、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney提示词-超硬核《阿凡达》人物概念手稿
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/Bl6uDaqI6SLi32LE1DtSlw
+
+在文章中合理地方使用以下配图：
+https://img.gemini3.hk/aiweb/midjourney-7.png
+-----------------------
+
+
+-------- 文章3 ---------
+文章关键字：midjourney关键词、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney提示词-生成网格排列组图
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/Hh4Ld8GFiLhhKFFV2KTptw
+
+在文章中合理地方使用以下配图：
+https://img.gemini3.hk/aiweb/midjourney-8.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：midjourney关键词、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney提示词——版画质感
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/yWInoeXzmgWk7xWz5wsNVA
+
+在文章中合理地方使用以下配图：
+https://img.gemini3.hk/aiweb/midjourney-9.webp
+-----------------------
+
+
+-------- 文章5 ---------
+文章关键字：midjourney关键词、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney提示词——情人节海报
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/ciqzAPMxZu6e6Yl7FtlRWQ
+
+在文章中合理地方使用以下配图：
+https://img.gemini3.hk/aiweb/midjourney-10.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。
+
+----------------------------------------------------------
+
+【任务2】
+在项目 @gemini3hk 的“博客”列表页面，新增以下多篇博客文章。
+
+博客内容主要是：介绍gemini3模型的使用教程，使用技巧，功能特性，使用场景等。
+介绍完后，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：去使用Gemini3
+按钮链接到：https://app.gemini3.hk/chat?model=gemini
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：gemini 3、gemini3 pro、gemini使用指南、gemini教程
+文章标题：
+Midjourney V8模型震撼上线：生成速度提升5倍，全面兼容V7个性化配置
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/cQJ93RFBgPE2olyujcASyw
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.gemini3.hk/aiweb/gemini3-blog-1.png
+-----------------------
+
+
+-------- 文章2 ---------
+文章关键字：gemini 3、gemini3 pro、gemini使用指南、gemini教程
+文章标题：
+实测Gemini 3 Pro - 个人使用分享
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/wx_-R4vMGkP4lnWn4EFZKg
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.gemini3.hk/aiweb/gemini3-blog-2.png
+-----------------------
+
+
+-------- 文章3 ---------
+文章关键字：gemini 3、gemini3 pro、gemini使用指南、gemini教程
+文章标题：
+Midjourney V8今天终于开放测试了
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/aJz73m_hbfawH4QPyGPD3A
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.gemini3.hk/aiweb/gemini3-blog-3.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：gemini 3、gemini3 pro、gemini使用指南、gemini教程
+文章标题：
+Gemini 3.0 Pro“压榨式”使用指南（附神级指令）
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/nWKz-I_5pvKuLQpMjoHMXw
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.gemini3.hk/aiweb/gemini3-blog-4.png
+-----------------------
+
+
+-------- 文章5 ---------
+文章关键字：gemini 3、gemini3 pro、gemini使用指南、gemini教程
+文章标题：
+一天搞定 20 篇文献，Gemini 3.0 文献精读实操手册，高效读文献超简单
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/mDHUx5M5ffV5wecZuBmJjQ
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.gemini3.hk/aiweb/gemini3-blog-5.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章md文件后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。

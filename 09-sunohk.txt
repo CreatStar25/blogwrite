@@ -1,0 +1,162 @@
+【任务1】
+在项目 @sunohk 的“Suno使用教程”的教程页面，新增以下多篇教程文章。
+
+教程内容主要是：介绍ai生成音乐模型suno的使用教程，suno使用技巧，功能特性，使用场景等。
+介绍完后，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：开始使用Suno
+按钮链接到：https://app.suno.hk/generate/music-tools/suno
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：suno使用教程、suno提示词、suno使用
+文章标题：
+Suno提示词宝典：200+组合帮你生成高质量作品
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/GLRJG1_uCCpauYBfcl97qg
+
+在文章中合理地方使用以下配图：
+https://img.suno.hk/aiweb/suno-1.png
+-----------------------
+
+
+-------- 文章2 ---------
+文章关键字：suno使用教程、suno提示词、suno使用
+文章标题：
+Suno 使用手册：从入门到进阶(保姆级教程)
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/WuS0tJUacVNxIWzKDoOQ8A
+
+在文章中合理地方使用以下配图：
+https://img.suno.hk/aiweb/suno-2.png
+-----------------------
+
+
+-------- 文章3 ---------
+文章关键字：suno使用教程、suno提示词、suno使用
+文章标题：
+Suno 创作指南
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/hAfQV_OQR4kAux6kkRC6yg
+
+在文章中合理地方使用以下配图：
+https://img.suno.hk/aiweb/suno-3.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：suno使用教程、suno提示词、suno使用
+文章标题：
+Suno 调音：六大分类提示词全解析，轻松塑造你的专属音色
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/GFH1n8heCrgp0bvHRIiSVA
+
+在文章中合理地方使用以下配图：
+https://img.suno.hk/aiweb/suno-4.png
+-----------------------
+
+
+-------- 文章5 ---------
+文章关键字：suno使用教程、suno提示词、suno使用
+文章标题：
+用Suno AI写歌，成为一名AI音乐人（含详细操作步骤）
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/hjMjWqrqtuPsTtMKAgA__A
+
+
+在文章中合理地方使用以下配图：
+https://img.suno.hk/aiweb/suno-5.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。
+
+----------------------------------------------------------
+
+【任务2】
+在项目 @sunohk 的博客列表，新增以下多篇博客文章。
+
+博客内容主要是：介绍ai生成音乐模型suno的使用教程，suno使用技巧，功能特性，使用场景等。
+博客文章的结尾，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：开始使用Suno
+按钮链接到：https://app.suno.hk/generate/music-tools/suno
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：suno使用教程、suno提示词、suno使用
+文章标题：
+Suno AI使用心得分享
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/kwqoW1GtrRKrutCm5ZEnBw
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.suno.hk/aiweb/suno-blog-1.png
+-----------------------
+
+
+-------- 文章2 ---------
+文章关键字：suno使用教程、suno提示词、suno使用
+文章标题：
+使用Suno创作配乐的一些心得
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/DVRMxB9d7opey6UnKUfUsw
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.suno.hk/aiweb/suno-blog-2.png
+-----------------------
+
+
+-------- 文章3 ---------
+文章关键字：suno使用教程、suno提示词、suno使用
+文章标题：
+AI作曲家来袭！用Suno挑战粤语歌曲创作
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/SZvDth6G3cElA7fRvfWmpA
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.suno.hk/aiweb/suno-blog-3.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：suno使用教程、suno提示词、suno使用
+文章标题：
+哼唱10秒，Suno AI直接帮你生成完整歌曲（保姆级步骤）
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/0JX_zcJFlTgm3fX8iztMNw
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.suno.hk/aiweb/suno-blog-4.png
+-----------------------
+
+
+-------- 文章5 ---------
+文章关键字：suno使用教程、suno提示词、suno使用
+文章标题：
+零基础Suno V5 AI音乐创作完整教程，5分钟出成品
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/kb90YILCGLzpEyHoNu5ccQ
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.suno.hk/aiweb/suno-blog-5.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章md文件后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。

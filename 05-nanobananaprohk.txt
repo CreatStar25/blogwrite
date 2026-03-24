@@ -1,0 +1,54 @@
+
+在项目 @nanobananaprohk 的“nanobanana使用指南”的教程页面，新增以下多篇教程文章。
+
+请你按以下介绍nanobanana模型的使用教程。
+介绍完后，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：开始使用nanobanana
+按钮链接到：https://app.nanobananapro.hk/generate/image-tools/nano
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：nanobanana pro、nanobanana pro、
+文章标题：即梦 nanobanana 2.0 使用教程：10 个案例讲清楚
+文章内容：请你参考：https://mp.weixin.qq.com/s/AtGd9GfmpyH0FHb20UzwRw
+在文章中合理地方使用以下配图：
+https://img.nanobananapro.hk/aiweb/nanobanana-51.mp4
+https://img.nanobananapro.hk/aiweb/nanobanana-52.mp4
+-----------------------
+
+
+-------- 文章2 ---------
+文章关键字：nanobanana 提示词、nanobanana2、
+文章标题： nanobanana——人人皆可上手的 AI视频模型！
+文章内容：请你参考：https://mp.weixin.qq.com/s/QGK5SqnP0pxfcMJ7iBxDGQ
+在文章中合理地方使用以下配图：
+https://img.nanobananapro.hk/aiweb/nanobanana-53.png
+https://img.nanobananapro.hk/aiweb/nanobanana-54.webp
+
+-----------------------
+
+
+-------- 文章3 ---------
+文章关键字：nanobanana使用手册、nanobanana指南、
+文章标题：nanobanana 2.0，小白必备指南
+文章内容：请你参考：https://mp.weixin.qq.com/s/5U_cATC4FF9S9KUmtDiEqA
+在文章中合理地方使用以下配图：
+https://img.nanobananapro.hk/aiweb/nanobanana-55.png
+https://img.nanobananapro.hk/aiweb/nanobanana-56.mp4
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：nanobanana使用手册、nanobanana指南、
+文章标题：即梦nanobanana2.0使用手册，全功能+避坑指南，上手即会！
+文章内容：请你参考：https://mp.weixin.qq.com/s/XmuHUg10go7G1txxiF7HAw
+在文章中合理地方使用以下配图：
+https://img.nanobananapro.hk/aiweb/nanobanana-1.mp4
+https://img.nanobananapro.hk/aiweb/nanobanana-5.mp4
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。

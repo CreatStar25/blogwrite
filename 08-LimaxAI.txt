@@ -1,0 +1,156 @@
+
+在项目 @LimaxAId 的“使用教程”的教程页面，新增以下多篇教程文章。
+
+教程内容主要是：介绍各主流模型的使用教程，使用技巧，功能特性，使用场景等。
+介绍完后，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：立刻使用Midjourney
+按钮链接到：https://www.limaxai.com/generate/image-tools/mjpro
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+-------- 文章1 ---------
+文章关键字：midjourney关键词、midjourney提示词、midjourney关键词
+文章标题：
+Midjourney 精选 · 附完整提示词1
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/ffTqu18HXa18gz6CP5NmUw
+
+在文章中合理地方使用以下配图：
+https://img.limaxai.com/aiweb/limaxai-6.png
+-----------------------
+
+-------- 文章2 ---------
+文章关键字：midjourney关键词、midjourney提示词、midjourney关键词
+文章标题： 
+Midjourney 精选 · 附完整提示词2
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/X2ym3kLs-s_9R8Y31QpXng
+
+在文章中合理地方使用以下配图：
+https://img.limaxai.com/aiweb/limaxai-7.png
+-----------------------
+
+-------- 文章3 ---------
+文章关键字：nanobanana关键词、nanobanana提示词、limaxai
+文章标题：
+Midjourney 精选 · 附完整提示词3
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/PmLiQpMNb9_5_ND0mGfMlw
+
+在文章中合理地方使用以下配图：
+https://img.limaxai.com/aiweb/limaxai-8.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：nanobanana关键词、nanobanana提示词、limaxai
+文章标题：
+Midjourney 精选 · 附完整提示词4
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/BwUn8PILj0tg53PJNS_e6g
+
+在文章中合理地方使用以下配图：
+https://img.limaxai.com/aiweb/limaxai-9.png
+-----------------------
+
+-------- 文章5 ---------
+文章关键字：nanobanana关键词、nanobanana提示词、limaxai
+文章标题：
+Midjourney 精选 · 附完整提示词5
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/IlKdeBZ4j6TAzZoGfvR9ew
+
+在文章中合理地方使用以下配图：
+https://img.limaxai.com/aiweb/limaxai-10.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。
+
+
+【任务2】
+在项目 @LimaxAId 的“博客”的页面，新增以下多篇博客文章。
+
+教程内容主要是：介绍各主流模型的使用教程，使用技巧，功能特性，使用场景等。
+介绍完后，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：立刻使用Midjourney
+按钮链接到：https://www.limaxai.com/generate/image-tools/mjpro
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：nanobanana2 教程、nanobanana提示词、电商运营
+文章标题：
+AI时代的电商运营神器：Nano Banana 2，助力“秒出”爆款商品卖点图
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/dTlTgHILHXbm3RwaNiDiZg
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.limaxai.com/aiweb/limaxai-blog-1.png
+https://img.limaxai.com/aiweb/limaxai-blog-1a.png
+
+-----------------------
+
+-------- 文章2 ---------
+文章关键字：nanobanana2 教程、nanobanana提示词、电商运营
+文章标题：
+用Nano Banana做blog封面图，封面点击率飙升
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/uw-VDy3Y-OJLlsxgvkUoHA
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.limaxai.com/aiweb/limaxai-blog-2.png
+-----------------------
+
+-------- 文章3 ---------
+文章关键字：nanobanana2 教程、nanobanana提示词、电商运营
+文章标题：
+nano banana 2一键搞定学科教学插图（内附详细提示词）
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/4tUZjSpnHLc0g2xhfmexnw
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.limaxai.com/aiweb/limaxai-blog-3.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：nanobanana2 教程、nanobanana提示词、电商运营
+文章标题：
+NanoBanana内容自动化套件：只需一张照片即可无限扩展产品展示、详情页！
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/zgy7mHr7mdabB9HYydVpXQ
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.limaxai.com/aiweb/limaxai-blog-4.png
+-----------------------
+
+
+-------- 文章5 ---------
+文章关键字：nanobanana2 教程、nanobanana提示词、电商运营
+文章标题：
+用Nano Banana生成你的专属手办和表情——各种玩法实操和指令分享
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/s-z88Tr9BSgdkKOE06llhQ
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.limaxai.com/aiweb/limaxai-blog-5.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章md文件后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。

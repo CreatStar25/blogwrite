@@ -1,0 +1,132 @@
+【任务1】
+在项目 @seedance2hk 的“Seedance 使用指南”的教程页面，新增以下多篇教程文章。
+
+教程内容：介绍notebooklm模型的使用教程，使用技巧，功能特性，使用场景等。
+介绍完后，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：立即使用
+按钮链接到：https://app.seedance2.hk/generate/video-tools/seedance2.0
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：seedance教程、seedance提示词、seedance资讯
+文章标题：
+创作者实测Seedance 2.0：这些功能秒杀Sora，那些短板却让人头疼
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/B0LR7hb3v4QDRETHtCAZrA
+
+在文章中合理地方使用以下配图：
+https://img.seedance2.hk/aiweb/seedance2-1.png
+-----------------------
+
+-------- 文章2 ---------
+文章关键字：seedance教程、seedance提示词、seedance资讯
+文章标题：
+Seedance2.0 使用教程 - AI 视频生成新体验
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/jaCnoERdD6EWkP5-L73v7A
+
+在文章中合理地方使用以下配图：
+https://img.seedance2.hk/aiweb/seedance2-2.png
+-----------------------
+
+-------- 文章3 ---------
+文章关键字：seedance教程、seedance提示词、seedance资讯
+文章标题：
+用 Seedance 2.0 轻松做出高质感内容
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/F65eia-h6dPCLO0Hn0-WoA
+
+在文章中合理地方使用以下配图：
+https://img.seedance2.hk/aiweb/seedance2-3.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。
+
+----------------------------------------------------------
+
+【任务2】
+在项目 @seedance2hk 的“博客”列表页面，新增以下多篇博客文章。
+
+博客内容主要是：介绍seedance2模型的使用教程，使用技巧，功能特性，使用场景等。
+介绍完后，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：立即使用
+按钮链接到：https://app.seedance2.hk/generate/video-tools/seedance2.0
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+
+-------- 文章1 ---------
+文章关键字：seedance教程、seedance提示词、seedance资讯
+文章标题：
+认识 Seedance 2.0  | AI视频生成模型
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/oLJaJeDDtBGOeIQn65pewQ
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.seedance2.hk/aiweb/seedance2-blog-1.png
+-----------------------
+
+-------- 文章2 ---------
+文章关键字：seedance教程、seedance提示词、seedance资讯
+文章标题：
+Seedance2.0生成视频价格公布
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/7dF0wt6eEIkTGTO-wWJj-A
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.seedance2.hk/aiweb/seedance2-blog-2.png
+-----------------------
+
+-------- 文章3 ---------
+文章关键字：seedance教程、seedance提示词、seedance资讯
+文章标题：
+Seedance2.0从“地表最强”变“排队最长”，个人实测：基础会员要排10小时
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/x0VweOpHZFWYUJOmUDm6cg
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.seedance2.hk/aiweb/seedance2-blog-3.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：seedance教程、seedance提示词、seedance资讯
+文章标题：
+“地表最强” AI 视频生成 Seedance 2.0 免费使用方法
+
+文章内容：请你参考：
+“地表最强” AI 视频生成 Seedance 2.0 免费使用方法
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.seedance2.hk/aiweb/seedance2-blog-4.png
+-----------------------
+
+-------- 文章5 ---------
+文章关键字：seedance教程、seedance提示词、seedance资讯
+文章标题：
+Sora被超越！Seedance，让openAI和谷歌都慌了
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/gSV2wl3QdaeFeSLcRqsS2Q
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.seedance2.hk/aiweb/seedance2-blog-5.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章md文件后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。

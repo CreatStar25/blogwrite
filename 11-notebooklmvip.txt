@@ -1,0 +1,162 @@
+【任务1】
+在项目 @notebooklmvip 的“NotebookLM使用指南”的教程页面，新增以下多篇教程文章。
+
+教程内容：介绍notebooklm模型的使用教程，使用技巧，功能特性，使用场景等。
+介绍完后，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：立即使用
+按钮链接到：https://app.notebooklm.vip
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：notebookLM关键词、notebookLM提示词、notebookLM教程
+文章标题：
+NotebookLM 教程：这8种用法，学会就是效率王者
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/OW43AwmH3H9SFc_ytM3k1g
+
+在文章中合理地方使用以下配图：
+https://img.notebooklm.vip/aiweb/notebooklm-1.png
+-----------------------
+
+
+-------- 文章2 ---------
+文章关键字：notebookLM关键词、notebookLM提示词、notebookLM教程
+文章标题：
+零基础掌握 NotebookLM，一分钟生成“疯狂动物城”等多种风格 PPT
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/-5cOmyvSjrtgkrqMvzn_Uw
+
+在文章中合理地方使用以下配图：
+https://img.notebooklm.vip/aiweb/notebooklm-2.png
+-----------------------
+
+
+-------- 文章3 ---------
+文章关键字：notebookLM关键词、notebookLM提示词、notebookLM教程
+文章标题：
+NotebookLM 进阶指南｜7 个被忽略的功能，直接拉开使用差距
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/Tsbwm-sZN35W_6q3E2gAgQ
+
+在文章中合理地方使用以下配图：
+https://img.notebooklm.vip/aiweb/notebooklm-3.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：notebookLM关键词、notebookLM提示词、notebookLM教程
+文章标题：
+AI笔记神器NotebookLM，保姆级教程
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/QJxXqXyn3vAzN2F7HwQLxg
+
+在文章中合理地方使用以下配图：
+https://img.notebooklm.vip/aiweb/notebooklm-4.png
+
+-----------------------
+
+
+-------- 文章5 ---------
+文章关键字：notebookLM关键词、notebookLM提示词、notebookLM教程
+文章标题：
+90%的人都不知道的Notebook LM高阶用法
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/FT15HIGSsX6tK9z7TkJQlA
+
+在文章中合理地方使用以下配图：
+https://img.notebooklm.vip/aiweb/notebooklm-5.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。
+
+----------------------------------------------------------
+
+【任务2】
+在项目 @notebooklmvip 的“博客”列表页面，新增以下多篇博客文章。
+
+博客内容主要是：介绍notebooklm模型的使用教程，使用技巧，功能特性，使用场景等。
+介绍完后，引导用户使用我的站点进行使用：
+使用醒目的彩色按钮，按钮文案为：立即使用
+按钮链接到：https://app.notebooklm.vip
+文章日期为今天的日期。
+文章内容需要符合SEO规范，利于被收录。
+
+
+-------- 文章1 ---------
+文章关键字：notebookLM关键词、notebookLM提示词、notebookLM教程
+文章标题：
+NotebookLM大改版：9个新工具让它从聊天机器人变成了生产力怪兽
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/kQBSaDEjMsm08JsqRkVSZg
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.notebooklm.vip/aiweb/notebooklm-blog-1.png
+-----------------------
+
+
+-------- 文章2 ---------
+文章关键字：notebookLM关键词、notebookLM提示词、notebookLM教程
+文章标题：
+notebooklm更新电影级视频播客，Pro用户终于能用了！
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/5QiMOCIEFslnbs-7tqD1pg
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.notebooklm.vip/aiweb/notebooklm-blog-2.png
+-----------------------
+
+
+-------- 文章3 ---------
+文章关键字：notebookLM关键词、notebookLM提示词、notebookLM教程
+文章标题：
+Google 把 NotebookLM 从读文档工具推成了视频、信息图和 PPT 工作台
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/YF-5MhBvNhugPzvp5RnmwA
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.notebooklm.vip/aiweb/notebooklm-blog-3.png
+-----------------------
+
+-------- 文章4 ---------
+文章关键字：notebookLM关键词、notebookLM提示词、notebookLM教程
+文章标题：
+2026年最实用：NotebookLM制作PPT太强了！
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/-IRNdIwMdcDRBA_gTJlEcw
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.notebooklm.vip/aiweb/notebooklm-blog-4.png
+-----------------------
+
+
+-------- 文章5 ---------
+文章关键字：notebookLM关键词、notebookLM提示词、notebookLM教程
+文章标题：
+NotebookLM详解及操作指南
+
+文章内容：请你参考：
+https://mp.weixin.qq.com/s/oN9lxXRw0c7THJ4_o9-W5A
+
+封面图（也需要在文章中合理地方使用以下配图）：
+https://img.notebooklm.vip/aiweb/notebooklm-blog-5.png
+-----------------------
+
+1、去掉参考链接的内容中的软文、广告部分、引流等与主题无关内容
+2、保留文中的格式、层级、段落、表格等信息；
+3、文章内容需要围绕标题和关键字，在原文基础上改写，请使用简体中文改写文章。
+4、生成完简体中文的文章md文件后，请你生成其他各语种的翻译版本。技术名称、品牌名词无需翻译。翻译内容要完整、本土化，利于SEO收录。
+5、生成完成之后请你确保：文章可以正常打开、阅读；切换语种功能正常。
